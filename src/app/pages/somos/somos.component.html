@@ -1,0 +1,38 @@
+<section class="somos-hero">
+  <div class="somos-hero__bg" [style.backgroundImage]="'url(' + baseUrl + 'images/lazo-somos-voz.png)'"></div>
+
+  <div class="somos-hero__content">
+    <h1>
+      Haciendo crecer nuestra<br />
+      comunidad desde 1948.
+    </h1>
+  </div>
+</section>
+<section class="somos-tabs">
+  <div class="tabs-container">
+    <div class="tab" *ngFor="let tab of tabs; let i = index" [class.active]="activeIndex === i">
+      <button class="tab-header" [ngClass]="tab.color" (click)="toggle(i)" [attr.aria-expanded]="activeIndex === i">
+        <div class="tab-inner">
+          <span class="tab-title">{{ tab.title }}</span>
+
+          <span class="tab-icon">
+            <img [src]="activeIndex === i 
+          ? 'icons/menos.svg' 
+          : 'icons/mas.svg'" alt="" aria-hidden="true" />
+          </span>
+        </div>
+      </button>
+      <div class="tab-panel" [ngClass]="tab.color" [class.open]="activeIndex === i" role="region">
+        <div class="tab-inner">
+          <div class="tab-content">
+            <p>{{ tab.mainContent }}</p>
+            <p *ngIf="tab.secondContent">{{ tab.secondContent }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="somos-image">
+    <img [src]="baseUrl + 'images/somos-voz.png'" alt="Somos COSPUD" />
+  </div>
+</section>

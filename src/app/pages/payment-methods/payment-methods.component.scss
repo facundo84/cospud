@@ -1,0 +1,198 @@
+@use '../../../styles/variables' as *;
+
+/* =========================
+   PAYMENT METHODS
+========================= */
+.payment-methods {
+    //width: 100%;
+    padding: 16px 16px;
+    display: flex;
+    justify-content: center;
+    background-color: $color-background-light-blue;
+    border-radius: 16px 16px 0px 0px;
+}
+
+/* Card principal */
+.payment-card {
+    max-width: $max-width;
+    padding: 32px 24px;
+    color: #ffffff;
+}
+
+/* =========================
+   HEADER
+========================= */
+.payment-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 24px;
+
+}
+
+.payment-header img {
+    width: 28px;
+    height: 28px;
+}
+
+.payment-header h2 {
+    margin: 0;
+    font-size: $font-size-lg;
+    font-weight: $font-weight-semibold;
+    color: #ffffff;
+}
+
+/* =========================
+   CONTENT
+========================= */
+.payment-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+
+    margin-bottom: 24px;
+}
+
+.payment-column h4 {
+    margin: 0 0 8px;
+    font-size: $font-size-base;
+    font-weight: $font-weight-semibold;
+    color: #ffffff;
+}
+
+.payment-column p {
+    margin: 0;
+    font-size: $font-size-base;
+    font-weight: $font-weight-regular;
+    line-height: 1.4;
+}
+
+/* Link visual (aunque no sea <a>) */
+.payment-link {
+    font-style: italic;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* =========================
+   COLUMNA DERECHA (BANCO)
+========================= */
+
+.payment-column--bank {
+    display: grid;
+    grid-template-columns: auto 12px 1fr;
+    column-gap: 12px;
+    align-items: start;
+}
+
+/* Texto izquierdo */
+.payment-label {
+    font-size: $font-size-base;
+    font-weight: $font-weight-semibold;
+    color: #ffffff;
+    white-space: nowrap;
+}
+
+.payment-separator {
+    display: flex;
+    align-items: center;
+    font-size: $font-size-base;
+    font-weight: $font-weight-regular;
+    color: #ffffff;
+}
+
+/* Texto derecho */
+.payment-link {
+    font-size: $font-size-base;
+    font-weight: $font-weight-regular;
+    font-style: italic;
+    text-decoration: underline;
+    line-height: 1.4;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.payment-footer p {
+    margin: 0;
+    font-size: $font-size-sm;
+    font-style: italic;
+    color: black;
+
+    span {
+        font-weight: $font-weight-semibold;
+    }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .payment-card {
+        padding: 28px 32px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .payment-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        align-items: start;
+    }
+
+    .payment-methods {
+        padding: 16px 8px;
+    }
+
+    .payment-card {
+        padding: 24px 12px;
+    }
+
+    .payment-header h2 {
+        font-size: $font-size-base;
+    }
+
+    .payment-column--bank {
+        grid-template-columns: auto auto 1fr;
+        column-gap: 6px;
+
+        .payment-label {
+            font-size: 0.8rem;
+            white-space: normal;
+        }
+
+        .payment-separator {
+            display: flex;
+            font-size: 0.8rem;
+        }
+
+        .payment-link {
+            font-size: 0.8rem;
+            line-height: 1.2;
+        }
+    }
+
+    .payment-column {
+        h4 {
+            font-size: 0.8rem;
+            margin-bottom: 4px;
+        }
+
+        p {
+            font-size: 0.75rem;
+            line-height: 1.2;
+        }
+    }
+
+    .payment-footer p {
+        font-size: 0.7rem;
+        text-align: center;
+        margin-top: 10px;
+    }
+}

@@ -1,0 +1,14 @@
+<section class="services">
+  <div class="grid">
+
+    <app-service-card
+      *ngFor="let service of services"
+      [title]="service.title"
+      [icon]="service.icon"
+      [ngClass]="service.bgCcolor"
+      [url]="service.url"
+      [fontColor]="service.fontColor">
+    </app-service-card>
+
+  </div>
+</section>

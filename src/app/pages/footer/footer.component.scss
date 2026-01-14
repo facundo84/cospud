@@ -1,0 +1,201 @@
+@use '../../../styles/variables' as *;
+
+/* =========================
+   FOOTER
+========================= */
+.site-footer {
+  width: 100%;
+}
+
+/* =========================
+   MAIN FOOTER
+========================= */
+// .footer-main {
+//   background-color: $color-background-dark-blue;
+//   padding: 45px 0 15px 0;
+// }
+.footer-main {
+  background-color: $color-background-dark-blue;
+  padding: 45px 0 0 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-container {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 32px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 64px;
+}
+
+/* =========================
+   BRAND
+========================= */
+.footer-brand {
+  position: relative;
+  display: flex;
+  align-items: anchor-center;
+  min-height: 180px;
+}
+
+.footer-shape {
+  position: absolute;
+  left: -109px;
+  bottom: 0;
+  width: 470px;
+  height: auto;
+  pointer-events: none;
+  z-index: 0;
+  transform: none;
+}
+
+.footer-logo {
+  position: relative;
+  z-index: 2;
+  padding-left: 90px;
+  padding-bottom: 20px;
+}
+
+.footer-logo img {
+  width: 180px;
+  margin-bottom: 8px;
+}
+
+.footer-logo p {
+  margin: 0;
+  font-size: $font-size-sm;
+  color: $color-text-white;
+  line-height: 1.4;
+}
+
+/* =========================
+   INFO
+========================= */
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+  color: $color-text-white;
+  padding-right: 390px;
+}
+
+.footer-info p {
+  margin: 0 0 8px;
+  font-size: $font-size-base;
+  line-height: 1.4;
+  font-weight: $font-weight-semibold;
+}
+
+/* Redes */
+.footer-social {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+
+}
+
+.footer-social img {
+  width: 18px;
+  height: 18px;
+}
+
+/* =========================
+   BOTTOM BAR
+========================= */
+.footer-bottom {
+  background-color: $color-background-green;
+  text-align: center;
+  padding: 12px 16px;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-regular;
+  color: $color-text-footer;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .footer-main {
+    padding: 30px 0 0 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    //padding: 0 250px 0 0;
+    padding: 10px 25px 0px 0;
+    gap: 0;
+    position: relative;
+    z-index: 2;
+  }
+
+  .footer-shape {
+    display: block;
+    position: absolute;
+    //left: -20px;
+    left: 0px;
+    bottom: 0;
+    width: 330px;
+    height: auto;
+    z-index: 1;
+  }
+
+  .footer-brand {
+    min-height: 140px;
+    flex: 0 0 auto;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    z-index: 3;
+  }
+
+  .footer-logo {
+    padding-left: 105px;
+    padding-bottom: 60px;
+    text-align: left;
+
+    img {
+      width: 110px;
+      margin-bottom: 6px;
+    }
+  }
+
+  .footer-info {
+    padding-right: 105px;
+    padding-bottom: 45px;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .footer-info p {
+    font-size: 0.55rem;
+    font-weight: $font-weight-semibold;
+    margin-bottom: 12px;
+  }
+
+  .footer-social {
+    justify-content: flex-end;
+    gap: 15px;
+
+    img {
+      width: 22px;
+      height: 22px;
+    }
+  }
+}

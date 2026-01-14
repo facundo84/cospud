@@ -1,1 +1,119 @@
-/* You can add global styles to this file, and also import other style files */
+@use './styles/variables' as *;
+
+* {
+  box-sizing: border-box; // 🔑 Crucial: evita que el padding sume ancho al elemento
+  -webkit-tap-highlight-color: transparent; // Mejora experiencia táctil en móvil
+}
+
+:root {
+  --base-url: '';
+}
+
+html {
+  font-size: 16px;
+}
+
+// body {
+//   margin: 0;
+//   height: 100%;
+//   font-family: $font-base;
+//   font-size: $font-size-base;
+//   font-weight: $font-weight-regular;
+//   line-height: $line-height-base;
+//   color: #003c3f;
+//   background-color: #ffffff;
+// }
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  /* 🔑 Esto elimina el espacio en blanco lateral en móviles */
+  overflow-x: hidden;
+  /* Previene que el scroll horizontal "rebote" en iOS/Android */
+  position: relative;
+  font-family: $font-base;
+  font-size: $font-size-base;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-base;
+  color: #003c3f;
+  background-color: #ffffff;
+}
+
+/* =========================
+   HEADINGS
+========================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-base;
+  line-height: $line-height-heading;
+  margin: 0;
+  color: #003c3f;
+}
+
+h1 {
+  font-size: $font-size-xxl;
+  font-weight: $font-weight-bold;
+}
+
+h2 {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+}
+
+h3 {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+}
+
+h4 {
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+}
+
+h5 {
+  font-size: $font-size-base;
+  font-weight: $font-weight-semibold;
+}
+
+h6 {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semibold;
+}
+
+/* =========================
+   TEXT ELEMENTS
+========================= */
+
+p {
+  margin: 0;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+}
+
+small {
+  font-size: $font-size-sm;
+}
+
+strong {
+  font-weight: $font-weight-bold;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem; // 32px
+  }
+
+  h2 {
+    font-size: 1.5rem; // 24px
+  }
+
+  h3 {
+    font-size: 1.25rem; // 20px
+  }
+}

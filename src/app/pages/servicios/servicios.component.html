@@ -1,0 +1,22 @@
+<!-- ===== CTA FULL WIDTH ===== -->
+<section class="services-cta">
+  <img class="cta-bg" [src]="baseUrl + 'images/services-cta.png'" alt="" aria-hidden="true" />
+  <div class="cta-title">
+    <h3>
+      Conocé nuestros <strong>Servicios</strong>
+    </h3>
+  </div>
+  <div class="cta-footer">
+    <a *ngFor="let service of services" class="cta-item" [routerLink]="service.link" [style.left.%]="service.left"
+      [fragment]="service.fragment" [innerHTML]="service.label">
+    </a>
+  </div>
+</section>
+
+
+<section id="electricity" style="height: 100vh;">
+  <h2>Información sobre Electricidad</h2>
+</section>
+<section id="water" style="height: 100vh;">
+  <h2>Información sobre el servicio de Agua</h2>
+</section>

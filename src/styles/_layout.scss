@@ -1,0 +1,15 @@
+@use './variables' as *;
+
+main {
+  min-height: calc(100vh - $header-height);
+}
+
+section {
+  width: 100%;
+}
+
+.container {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}

@@ -1,0 +1,297 @@
+@use '../../../styles/variables' as *;
+
+/* =========================
+   HERO
+========================= */
+.somos-hero {
+  position: relative;
+  height: 310px;
+  overflow: hidden;
+  background-color: $color-background-hero;
+}
+
+.somos-hero__bg {
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 35%;
+  z-index: 0;
+}
+
+.somos-hero__content {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-text-white;
+  text-align: center;
+  //padding: 65px 0px 0px;
+  padding: 130px 0px 0px;
+}
+
+.somos-hero__content h1 {
+  margin: 0;
+  max-width: 720px;
+  font-size: $font-size-xl;
+  font-weight: $font-weight-regular;
+  line-height: 1.2;
+  color: $color-text-white;
+}
+
+// /* =========================
+//    TABS / ACCORDION
+// ========================= */
+.somos-tabs {
+  background-color: $color-background-hero;
+}
+
+.tabs-container {
+  margin: 0 auto;
+  position: relative;
+}
+
+.tab {
+  position: relative;
+  margin-top: -16px;
+  z-index: 1;
+}
+
+.tab-inner {
+  max-width: 720px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
+
+.tab-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 24px;
+}
+
+.tab-panel .tab-inner {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.tab:first-child {
+  margin-top: 0;
+}
+
+.tab.active {
+  z-index: 10;
+}
+
+/* ===== HEADER ===== */
+.tab-header {
+  width: 100%;
+  border: none;
+  padding: 28px 0;
+  cursor: pointer;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-white;
+  border-radius: 14px;
+}
+
+/* Colores */
+.tab-header.mission {
+  background-color: $color-background-blue;
+}
+
+.tab-header.vision {
+  background-color: $color-background-light-blue;
+}
+
+.tab-header.values {
+  background-color: $color-background-green;
+}
+
+.tab-header.somos {
+  background-color: $color-background-dark-green;
+}
+
+/* ===== ICON ===== */
+.tab-icon img {
+  width: 20px;
+  height: 20px;
+}
+
+/* ===== PANEL ===== */
+// .tab-panel {
+//   max-height: 0;
+//   overflow: hidden;
+
+//   margin-top: -16px;
+//   padding-top: 16px;
+
+//   border-radius: 0 0 16px 16px;
+//   transition: max-height 0.35s ease;
+// }
+.tab-panel {
+  max-height: 0;
+  overflow: hidden;
+  margin-top: -16px;
+  padding-top: 16px;
+  border-radius: 0 0 16px 16px;
+  /* 🔑 Cambiamos la transición para que sea más fluida con contenido variable */
+  transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+}
+
+.tab:not(.active) .tab-header {
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.08);
+}
+
+// .tab-panel.open {
+//   max-height: 280px;
+// }
+.tab-panel.open {
+  /* 🔑 CAMBIO CLAVE: En lugar de 280px (fijo), usamos un valor alto 
+     que permita que el texto crezca según necesite sin cortarse */
+  max-height: 1000px;
+  transition: max-height 1s ease-in-out;
+}
+
+.tab-panel p {
+  margin: 0;
+  font-size: $font-size-base;
+  line-height: 1.7;
+  color: #ffffff;
+}
+
+.tab-panel.mission {
+  background-color: $color-background-blue;
+}
+
+.tab-panel.vision {
+  background-color: $color-background-light-blue;
+}
+
+.tab-panel.values {
+  background-color: $color-background-green;
+}
+
+.tab-panel.somos {
+  background-color: $color-background-dark-green;
+}
+
+/* =========================
+   IMAGEN INFERIOR
+========================= */
+.somos-image {
+  width: 100%;
+  overflow: hidden;
+}
+
+.somos-image img {
+  width: 100%;
+  height: 560px;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  // .somos-hero__bg {
+  //   background-size: 85%;
+  // }
+
+  // .somos-hero {
+  //   height: 260px;
+  // }
+
+  // .tab-panel p {
+  //   padding: 20px 24px;
+  //   line-height: 1.6;
+  // }
+
+  // .tab-inner {
+  //   max-width: 100%;
+  //   padding: 0 24px;
+  //   gap: 16px;
+  // }
+
+  // .tab-header {
+  //   padding: 20px 0;
+  //   font-size: $font-size-base;
+  // }
+
+  // .somos-image {
+  //   margin-top: 32px;
+  //   padding-bottom: 48px;
+  // }
+
+  // .somos-image img {
+  //   max-width: 100%;
+  //   padding: 0 24px;
+  //   height: 180px;
+  // }
+  @media (max-width: 768px) {
+    .somos-hero {
+      height: 260px;
+    }
+
+    .somos-hero__bg {
+      // background-size: 85%;
+      // background-position: center 40%;
+      background-size: 65%;
+      background-position: center 0%;
+    }
+
+    .somos-hero__content h1 {
+      font-size: 1.5rem;
+      padding: 0 20px;
+    }
+
+    /* --- Ajustes de Contenido de Tabs --- */
+    .tab-inner {
+      max-width: 100%;
+      padding: 0 24px;
+      gap: 16px;
+    }
+
+    .tab-content {
+      /* 🔑 Eliminamos paddings extraños y permitimos que el flex maneje los párrafos */
+      padding: 10px 24px 30px;
+      gap: 12px;
+    }
+
+    .tab-panel p {
+      padding: 0;
+      /* Reseteamos el padding anterior para que use el del contenedor */
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .tab-header {
+      padding: 22px 0;
+      font-size: $font-size-base;
+    }
+
+    /* --- IMAGEN SOMOS-VOZ (Corrección Ancho 100%) --- */
+    .somos-image {
+      margin-top: 0;
+      padding-bottom: 0;
+      width: 100%;
+    }
+
+    .somos-image img {
+      /* 🔑 Eliminamos el padding lateral de 24px para que sea 100% real */
+      padding: 0;
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+      /* Dejamos que la proporción sea natural */
+      aspect-ratio: 16 / 9;
+      /* Opcional: define una proporción fija */
+      object-fit: cover;
+    }
+  }
+}

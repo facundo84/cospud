@@ -1,0 +1,42 @@
+@use '../../../../styles/variables' as *;
+
+.services {
+  background-color: #f4f6f6;
+  margin: 0;
+  padding: 0;
+}
+
+.grid {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  display: grid;
+
+  /* Desktop */
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0; // ✅ SIN espacios entre cards
+}
+
+/* ===== COLORES ===== */
+.electricidad { background-color: $color-background-electricity; }
+.agua         { background-color: $color-background-water; }
+.internet     { background-color: $color-background-internet; }
+.cable        { background-color: $color-background-cable; }
+.telefono     { background-color: $color-background-telephone; }
+
+/* ===== Tablet ===== */
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0; // sigue sin separación
+  }
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 0;
+  }
+}

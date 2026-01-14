@@ -1,0 +1,19 @@
+import { CommonModule, DOCUMENT } from '@angular/common';
+import { Component, Inject } from '@angular/core';
+
+@Component({
+  selector: 'app-somos-voz',
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './somos-voz.component.html',
+  styleUrl: './somos-voz.component.scss'
+})
+export class SomosVozComponent {
+  baseUrl = '';
+  
+  constructor(@Inject(DOCUMENT) private document: Document) {
+    const base = this.document.querySelector('base')?.getAttribute('href');
+    this.baseUrl = base ?? '/';
+  }
+
+}

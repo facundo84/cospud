@@ -1,0 +1,46 @@
+<section class="quick-actions">
+  <div class="actions-container">
+    <div class="actions-grid">
+      <div class="action action-pay">
+        <img src="icons/paga-factura.svg" alt="Pagar factura" />
+        <span>Pagá tu factura</span>
+      </div>
+
+      <div class="action action-contract">
+        <img src="icons/contrata-servicio.svg" alt="Contratar servicio" />
+        <span>Contratá un servicio</span>
+      </div>
+
+      <div class="action action-support">
+        <img src="icons/consultas-reclamos.svg" alt="Consultas y reclamos" />
+        <span>Consultas y reclamos</span>
+      </div>
+    </div>
+  </div>
+  <section class="institutional-hero">
+    <img class="hero-bg" [src]="baseUrl + 'images/hero-background.png'" alt="" aria-hidden="true" />
+    <div class="hero-content">
+      <h2>
+        Haciendo crecer a nuestra<br />
+        comunidad desde 1948
+      </h2>
+    </div>
+  </section>
+  <section class="services-cta">
+    <img class="cta-bg" [src]="baseUrl + 'images/services-cta.png'" alt="" aria-hidden="true" />
+    <div class="cta-title">
+      <h3>
+        Conocé nuestros <strong>Servicios</strong>
+      </h3>
+    </div>
+    <div class="cta-footer">
+      <a
+        *ngFor="let service of services"
+        class="cta-item"
+        [routerLink]="service.link"
+        [style.left.%]="service.left"
+        [innerHTML]="service.label">
+      </a>
+    </div>
+  </section>
+</section>
