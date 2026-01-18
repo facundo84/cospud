@@ -1,5 +1,4 @@
-<!-- ===== CTA FULL WIDTH ===== -->
-<section class="services-cta">
+<section class="services-cta" id="servicios">
   <img class="cta-bg" [src]="baseUrl + 'images/services-cta.png'" alt="" aria-hidden="true" />
   <div class="cta-title">
     <h3>
@@ -7,16 +6,50 @@
     </h3>
   </div>
   <div class="cta-footer">
-    <a *ngFor="let service of services" class="cta-item" [routerLink]="service.link" [style.left.%]="service.left"
-      [fragment]="service.fragment" [innerHTML]="service.label">
+    <a *ngFor="let service of serviceList" class="cta-item" [style.left.%]="service.left"
+      [innerHTML]="service.label" [routerLink]="service.link">
     </a>
   </div>
 </section>
 
+<!-- <section
+  class="service-card"
+  *ngFor="let service of services"
+  [id]="service.id"
+>
+  <header
+    class="service-header"
+    [style.backgroundImage]="'url(' + service.image + ')'"
+  >
+    <div class="service-header-overlay">
+      <div class="service-icon">
+        <img [src]="service.icon" [alt]="service.title" />
+      </div>
+      <h2 class="service-title">{{ service.title }}</h2>
+    </div>
+  </header>
 
-<section id="electricity" style="height: 100vh;">
-  <h2>Información sobre Electricidad</h2>
-</section>
-<section id="water" style="height: 100vh;">
-  <h2>Información sobre el servicio de Agua</h2>
-</section>
+  <section class="service-description">
+    <p *ngFor="let paragraph of service.description">
+      {{ paragraph }}
+    </p>
+  </section>
+
+  <section class="service-requirements">
+    <h3>Requisitos de conexión</h3>
+
+    <ul>
+      <li *ngFor="let req of service.requirements">
+        {{ req }}
+      </li>
+    </ul>
+
+    <a
+      class="service-download"
+      [href]="service.download"
+      download
+    >
+      Descargá los requisitos
+    </a>
+  </section>
+</section> -->

@@ -1,8 +1,8 @@
 @use './styles/variables' as *;
 
 * {
-  box-sizing: border-box; // 🔑 Crucial: evita que el padding sume ancho al elemento
-  -webkit-tap-highlight-color: transparent; // Mejora experiencia táctil en móvil
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 :root {
@@ -11,26 +11,15 @@
 
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
-// body {
-//   margin: 0;
-//   height: 100%;
-//   font-family: $font-base;
-//   font-size: $font-size-base;
-//   font-weight: $font-weight-regular;
-//   line-height: $line-height-base;
-//   color: #003c3f;
-//   background-color: #ffffff;
-// }
 html,
 body {
   margin: 0;
   padding: 0;
   width: 100%;
-  /* 🔑 Esto elimina el espacio en blanco lateral en móviles */
   overflow-x: hidden;
-  /* Previene que el scroll horizontal "rebote" en iOS/Android */
   position: relative;
   font-family: $font-base;
   font-size: $font-size-base;

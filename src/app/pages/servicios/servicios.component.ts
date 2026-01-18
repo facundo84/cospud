@@ -18,12 +18,78 @@ export class ServiciosComponent {
     this.baseUrl = base ?? '/';
   }
 
-  services = [
-    { label: 'Agua', left: 8, fragment: 'water' },
-    { label: 'Electricidad', left: 26, fragment: 'electricity' },
-    { label: 'Telefonía', left: 42, link: '/servicios/telefonia' },
-    { label: 'Cable', left: 58, link: '/servicios/cable' },
-    { label: 'Internet', left: 74, link: '/servicios/internet' },
-    { label: 'Ambulancia<br/>Sepelios', left: 92, link: '/servicios/ambulancia' }
+  serviceList = [
+    {
+      label: 'Agua',
+      fragment: 'agua',
+      left: 8,
+      link: '/service-details/agua'
+    },
+    {
+      label: 'Electricidad',
+      fragment: 'electricidad',
+      left: 26,
+      link: '/service-details/electricidad'
+    },
+    {
+      label: 'Telefonía',
+      fragment: 'telefonia',
+      left: 42,
+      link: '/service-details/telefonia'
+    },
+    {
+      label: 'Cable',
+      fragment: 'cable',
+      left: 58,
+      link: '/service-details/cable'
+    },
+    {
+      label: 'Internet',
+      fragment: 'internet',
+      left: 74,
+      link: '/service-details/internet'
+    },
+    {
+      label: 'Ambulancia / Sepelios',
+      fragment: 'ambulancia',
+      left: 92,
+      link: '/service-details/sepelios'
+    }
   ];
+  
+
+  // services = [
+  //   {
+  //     id: 'agua',
+  //     title: 'Agua',
+  //     icon: '/icons/agua.svg',
+  //     image: '/images/servicio-agua.png',
+  //     description: [
+  //       'El agua potable es un recurso esencial para la vida.',
+  //       'COSPUD realiza la captación, tratamiento y distribución.'
+  //     ],
+  //     requirements: [
+  //       'Solicitud del propietario.',
+  //       'Permiso municipal.',
+  //       'Pago de costos.',
+  //       'Instalación de medidor.'
+  //     ],
+  //     download: 'assets/docs/requisitos-agua.pdf'
+  //   },
+  //   {
+  //     id: 'electricidad',
+  //     title: 'Electricidad',
+  //     icon: 'assets/svg/electricidad.svg',
+  //     image: 'assets/img/servicios/electricidad.jpg',
+  //     description: [
+  //       'Servicio de energía eléctrica domiciliaria.'
+  //     ],
+  //     requirements: [
+  //       'Documentación del inmueble.',
+  //       'Instalación aprobada.'
+  //     ],
+  //     download: 'assets/docs/requisitos-electricidad.pdf'
+  //   }
+  // ];
+  
 }
