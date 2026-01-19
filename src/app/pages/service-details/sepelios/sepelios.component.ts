@@ -2,18 +2,18 @@ import { NgForOf } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-agua',
+  selector: 'app-sepelios',
   standalone: true,
   imports: [NgForOf],
-  templateUrl: './agua.component.html',
-  styleUrl: './agua.component.scss'
+  templateUrl: './sepelios.component.html',
+  styleUrl: './sepelios.component.scss'
 })
-export class AguaComponent {
+export class SepeliosComponent {
 
   services = [
     {
-      id: 'agua',
-      title: 'Agua',
+      id: 'sepelios',
+      title: 'Servicio de Ambulancia y Sepelio',
       icon: 'icons/agua.svg',
       downloadIcon: 'icons/requisitos.svg',
       image: 'images/servicio-agua.png',

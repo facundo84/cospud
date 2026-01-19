@@ -1,0 +1,43 @@
+<section class="service-card" *ngFor="let service of services" [id]="service.id">
+    <header class="service-header" [style.backgroundImage]="'url(' + service.image + ')'">
+        <div class="service-header-overlay">
+            <div class="service-icon">
+                <img [src]="service.icon" [alt]="service.title" />
+            </div>
+            <h2 class="service-title">{{ service.title }}</h2>
+
+        </div>
+    </header>
+
+    <section class="service-description">
+        <h4>Internet por Fibra Óptica + Televisión Digital</h4>
+        <p>Servicio de conectividad de alta velocidad por fibra óptica directa al hogar. Incluye televisión digital con
+            más de 130 canales HD y SD.
+        </p>
+        <p>El servicio inicial comienza con 80 Mb. de velocidad y puede ascender ampliamente.</p>
+        <p>El abono incluye ambos servicios (Internet + TV), aunque pueden contratarse por separado.</p>
+    </section>
+
+    <section class="service-description">
+        <h4>Telefonia</h4>
+        <p>El servicio de Telefonía fija garantiza comunicaciones claras y confiables, tanto local como
+            internacionalmente.
+        </p>
+    </section>
+
+    <section class="service-requirements">
+        <h3>Requisitos de conexión</h3>
+        <p>Si es propietario del inmueble debe abonar el costo de conexión.
+        </p>
+
+        <p>
+            Si es inquilino, debe abonar igual costo y presentar contrato de alquiler certificado por Escribano.
+        </p>
+
+
+        <a class="service-download" [href]="service.download" download>
+            <img class="download-icon" [src]="service.downloadIcon" alt="" aria-hidden="true" />
+            Descargá los requisitos
+        </a>
+    </section>
+</section>

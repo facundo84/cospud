@@ -78,99 +78,99 @@
     text-decoration: underline;
 }
 
-/* =========================================================
-   SERVICE CARD
-========================================================= */
-.service-card {
-    width: 100%;
-    margin-bottom: 64px;
-}
+// /* =========================================================
+//    SERVICE CARD
+// ========================================================= */
+// .service-card {
+//     width: 100%;
+//     margin-bottom: 64px;
+// }
 
-/* ===== HEADER ===== */
-.service-header {
-    width: 100%;
-    padding-top: 56.25%;
-    background-size: cover;
-    background-position: center; 
-    position: relative;
-  }
+// /* ===== HEADER ===== */
+// .service-header {
+//     width: 100%;
+//     padding-top: 56.25%;
+//     background-size: cover;
+//     background-position: center; 
+//     position: relative;
+//   }
 
 
-.service-header-overlay {
-    position: absolute;
-    inset: 0; 
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 24px;
-  }
+// .service-header-overlay {
+//     position: absolute;
+//     inset: 0; 
+//     display: flex;
+//     flex-direction: column;
+//     align-items: flex-start;
+//     justify-content: flex-start;
+//     padding: 24px;
+//   }
 
-.service-icon img {
-    width: 48px;
-    height: 48px;
-    margin-top: 10px;
-  }
+// .service-icon img {
+//     width: 48px;
+//     height: 48px;
+//     margin-top: 10px;
+//   }
 
-.service-title {
-    color: #ffffff;
-    font-size: 32px;
-    text-align: center;
-    margin: 0;
-}
+// .service-title {
+//     color: #ffffff;
+//     font-size: 32px;
+//     text-align: center;
+//     margin: 0;
+// }
 
-/* ===== DESCRIPCIÓN ===== */
-.service-description {
-    background-color: #f2f2f2;
-    padding: 32px;
-    border-radius: 0 0 24px 24px;
-}
+// /* ===== DESCRIPCIÓN ===== */
+// .service-description {
+//     background-color: #f2f2f2;
+//     padding: 32px;
+//     border-radius: 0 0 24px 24px;
+// }
 
-.service-description p {
-    margin-bottom: 16px;
-    line-height: 1.6;
-    color: #333;
-}
+// .service-description p {
+//     margin-bottom: 16px;
+//     line-height: 1.6;
+//     color: #333;
+// }
 
-/* ===== REQUISITOS ===== */
-.service-requirements {
-    padding: 32px;
-}
+// /* ===== REQUISITOS ===== */
+// .service-requirements {
+//     padding: 32px;
+// }
 
-.service-requirements h3 {
-    margin-bottom: 16px;
-    font-size: 20px;
-}
+// .service-requirements h3 {
+//     margin-bottom: 16px;
+//     font-size: 20px;
+// }
 
-.service-requirements ul {
-    padding-left: 20px;
-    margin-bottom: 24px;
-}
+// .service-requirements ul {
+//     padding-left: 20px;
+//     margin-bottom: 24px;
+// }
 
-.service-requirements li {
-    margin-bottom: 8px;
-    line-height: 1.4;
-}
+// .service-requirements li {
+//     margin-bottom: 8px;
+//     line-height: 1.4;
+// }
 
-/* ===== BOTÓN DESCARGA ===== */
-.service-download {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
+// /* ===== BOTÓN DESCARGA ===== */
+// .service-download {
+//     display: inline-flex;
+//     align-items: center;
+//     gap: 8px;
 
-    padding: 12px 24px;
-    background-color: #1ca9b8;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 999px;
-    font-size: 14px;
-    font-weight: 500;
-}
+//     padding: 12px 24px;
+//     background-color: #1ca9b8;
+//     color: #ffffff;
+//     text-decoration: none;
+//     border-radius: 999px;
+//     font-size: 14px;
+//     font-weight: 500;
+// }
 
-.service-download:hover,
-.service-download:focus-visible {
-    background-color: darken(#1ca9b8, 8%);
-}
+// .service-download:hover,
+// .service-download:focus-visible {
+//     background-color: darken(#1ca9b8, 8%);
+// }
 
 /* =========================================================
    TABLET
@@ -189,43 +189,85 @@
    MOBILE
 ========================================================= */
 @media (max-width: 768px) {
+
+    /* =========================
+       CONTENEDOR
+    ========================= */
     .services-cta {
-        height: auto;
-        margin-top: 32px;
-        margin-bottom: 32px;
-        padding-bottom: 24px;
+      height: auto;
+      padding: 24px 0;
+      background-color: #003c3f;
     }
-
+  
+    /* Fondo decorativo */
+    .cta-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      //height: 100%;
+      object-fit: cover;
+      object-position: center;
+      //opacity: 0.25;
+    }
+  
+    /* =========================
+       TÍTULO
+    ========================= */
+    .cta-title {
+      margin-bottom: 80px;
+    }
+  
+    .cta-title h3 {
+      font-size: 16px;
+    }
+  
+    /* =========================
+       GRID DE SERVICIOS (6 cols)
+    ========================= */
     .cta-footer {
-        position: static;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px;
-        padding-top: 16px;
+      position: relative;
+      bottom: auto;
+  
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 8px;
+  
+      padding: 0 12px;
     }
-
+  
+    /* =========================
+       ITEM
+    ========================= */
     .cta-item {
-        position: static;
-        transform: none;
-        font-size: 13px;
+      position: static;
+      transform: none;
+  
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+  
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 11px;
+      text-align: center;
     }
-
-    .service-header {
-        min-height: 180px;
-      }
-
-    .service-title {
-        font-size: 22px;
+  
+    .cta-item:focus-visible {
+      outline: 2px solid #ffffff;
+      outline-offset: 4px;
     }
-
-    .service-description,
-    .service-requirements {
-        padding: 20px;
+  
+    /* =========================
+       ICONO
+    ========================= */
+    .cta-icon {
+      width: 28px;
+      height: 28px;
     }
-
-    .service-download {
-        width: 100%;
-        justify-content: center;
+  
+    .cta-label {
+      line-height: 1.1;
     }
-}
+  }
+  

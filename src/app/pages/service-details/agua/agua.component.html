@@ -1,1 +1,54 @@
-<p>agua works!</p>
+<section class="service-card" *ngFor="let service of services" [id]="service.id">
+    <header class="service-header" [style.backgroundImage]="'url(' + service.image + ')'">
+        <div class="service-header-overlay">
+            <div class="service-icon">
+                <img [src]="service.icon" [alt]="service.title" />
+            </div>
+            <h2 class="service-title">{{ service.title }}</h2>
+        </div>
+    </header>
+
+    <section class="service-description">
+         <p>El agua potable es un recurso <span>esencial para la vida</span>. COSPUD realiza la captación, tratamiento
+            almacenamiento y distribución del agua en Despeñaderos, garantizando su potabilidad mediante periódicos
+            <span>controles fisicoquímicos y bacteriológicos</span>.
+        </p>
+        <p>En Despeñaderos, el agua potable se obtiene a partir de <span>dos pozos</span> que funcionan de manera
+            alternada según la demanda. Desde allí, el agua es transportada hasta la <span>cisterna local</span>, que
+            cuenta con una capacidad de 350.000 litros. Luego, se somete a un proceso de <span>limpieza, purificación y
+                desinfección con hipoclorito</span> en proporciones adecuadas, para finalmente distribuirse por gravedad
+            hacia los hogares a través de tuberías de PVC.</p>
+        <p>Para garantizar su calidad, COSPUD realiza <span>controles diarios de cloro y análisis fisicoquímicos y
+                bacteriológicos de manera periódica</span>.</p>
+        <p>Se recomienda a los usuarios <span>mantener en condiciones sus propios tanques</span> domiciliarios,
+            lavándolos y tapándolos correctamente.</p>
+    </section>
+
+    <section class="service-requirements">
+        <h3>Requisitos de conexión</h3>
+        <p>La conexión debe ser solicitada por el <span>propietario</span> en la administración de la Cooperativa. El
+            control del consumo mensual se realiza mediante medidor.
+        </p>
+
+        <p>
+            <span>El usuario debe presentar</span> Escritura, Permiso Municipal, Parcelario y abonar los costos
+            correspondientes
+            según los metros de frente del terreno.
+        </p>
+
+        <p>En caso de que la vivienda esté habitada por un <span>inquilino</span>, el servicio se mantiene a
+            <span>nombre
+                del propietario</span>, quien será responsable por cualquier deuda que pudiera generarse.
+        </p>
+
+        <p>
+            <span>El consumo se controla mediante medidores:</span> el personal de la cooperativa sólo realiza la
+            lectura, mientras que <span>la limpieza de la caja es responsabilidad exclusiva del usuario</span>.
+
+        </p>
+        <a class="service-download" [href]="service.download" download>
+            <img class="download-icon" [src]="service.downloadIcon" alt="" aria-hidden="true" />
+            Descargá los requisitos
+        </a>
+    </section>
+</section>

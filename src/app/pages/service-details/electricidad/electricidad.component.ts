@@ -2,19 +2,19 @@ import { NgForOf } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-agua',
+  selector: 'app-electricidad',
   standalone: true,
   imports: [NgForOf],
-  templateUrl: './agua.component.html',
-  styleUrl: './agua.component.scss'
+  templateUrl: './electricidad.component.html',
+  styleUrl: './electricidad.component.scss'
 })
-export class AguaComponent {
+export class ElectricidadComponent {
 
   services = [
     {
-      id: 'agua',
-      title: 'Agua',
-      icon: 'icons/agua.svg',
+      id: 'electricidad',
+      title: 'Electricidad',
+      icon: 'icons/electricidad.svg',
       downloadIcon: 'icons/requisitos.svg',
       image: 'images/servicio-agua.png',
       download: 'assets/docs/requisitos-agua.pdf'

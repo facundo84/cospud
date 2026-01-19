@@ -7,6 +7,7 @@ import { QuickActionsComponent } from '../quick-actions/quick-actions.component'
 import { SocialComponent } from '../social/social.component';
 import { SocialWidgetComponent } from '../social-widget/social-widget.component';
 import { PaymentMethodsComponent } from '../payment-methods/payment-methods.component';
+import { ServiciosComponent } from '../servicios/servicios.component';
 
 
 @Component({
@@ -19,7 +20,8 @@ import { PaymentMethodsComponent } from '../payment-methods/payment-methods.comp
     QuickActionsComponent,
     SocialComponent,
     SocialWidgetComponent,
-    PaymentMethodsComponent
+    PaymentMethodsComponent,
+    ServiciosComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'

@@ -1,0 +1,54 @@
+<section class="service-card" *ngFor="let service of services" [id]="service.id">
+    <header class="service-header" [style.backgroundImage]="'url(' + service.image + ')'">
+        <div class="service-header-overlay">
+            <div class="service-icon">
+                <img [src]="service.icon" [alt]="service.title" />
+            </div>
+            <h2 class="service-title">{{ service.title }}</h2>
+        </div>
+    </header>
+
+    <section class="service-description">
+        <h4>Servicio de Ambulancia</h4>
+        <p>El servicio de traslado de pacientes desde su domicilio o centros médicos a clínicas u hospitales de mayor
+            complejidad, sin costo adicional (dentro de un radio de 50 km.) Incluye al titular del servicio y a su grupo
+            familiar (esposa/o e hijos menores de 18 años).
+        </p>
+        <p>Hará uso de la ambulancia toda persona que no pueda ser movilizada en auto o colectivo, lo cual deberá
+            constar en certificado médico.</p>
+        <p>No se realizan traslados para consultas, curaciones, análisis ni estudios de imágenes. Tampoco para altas
+            médicas.</p>
+        <p>En caso de accidentes, no se realizan traslados desde el lugar del siniestro, sino desde el centro
+            asistencial donde se encuentre la persona.</p>
+        <p>Si se trata de urgencias, no se incluye atención médica durante el viaje. El paciente debe ser acompañado por
+            un médico o trabajador de la salud.</p>
+    </section>
+
+    <section class="service-requirements-main">
+        <h3>Requisitos para solicitar el servicio</h3>
+        <p>Ser abonado del servicio de Electricidad y no registrar deuda.
+            Solicitar planilla de traslado social en nuestras oficinas, la cual será completada por el médico que deriva
+            al paciente.
+        </p>
+        </section>
+
+    <section class="service-description">
+        <h4>Servicio de Sepelio</h4>
+        <p>La carencia es de 6 meses a partir del momento en que se solicita.</p>
+        <p>En caso de no ser utilizado, no corresponde reintegro alguno.</p>
+        <p>Abonando un adicional, se puede optar por Cremación, siempre que sea solicitada con anticipación.</p>
+    </section>
+
+    <section class="service-requirements">
+        <h3>Requisitos para solicitar el servicio</h3>
+        <p>Previa firma de la solicitud en nuestras oficinas, el usuario podrá incluir el Sepelio en la factura de
+            cualquier servicio, el cual debe permanecer al día.</p>
+    </section>
+
+    <section class="service-requirements-footer">
+        <a class="service-download" [href]="service.download" download>
+            <img class="download-icon" [src]="service.downloadIcon" alt="" aria-hidden="true" />
+            Descargá los requisitos
+        </a>
+    </section>
+</section>

@@ -1,0 +1,34 @@
+<section class="service-card" *ngFor="let service of services" [id]="service.id">
+    <header class="service-header" [style.backgroundImage]="'url(' + service.image + ')'">
+        <div class="service-header-overlay">
+            <div class="service-icon">
+                <img [src]="service.icon" [alt]="service.title" />
+            </div>
+            <h2 class="service-title">{{ service.title }}</h2>
+        </div>
+    </header>
+
+    <section class="service-description">
+         <p>El servicio de energía eléctrica de COSPUD cuenta con redes de media tensión protegidas, sistema detector de fallas y control de consumo por medio de medidores digitales y, recientemente, por medidores inteligentes (en algunas zonas).
+        </p>
+        
+    </section>
+
+    <section class="service-requirements">
+        <h3>Requisitos de conexión</h3>
+        <p>Si se trata de una conexión nueva, el propietario del inmueble debe presentar Escritura, Permiso Municipal, Parcelario y Certificado Apto de electricista matriculado.
+        </p>
+
+        <p>
+            Abonar costos de Acometida, Medidor y Derecho de conexión.
+Si el inmueble es rentado, el inquilino deberá abonar sólo el costo del derecho de conexión y presentar contrato de alquiler certificado por Escribano. Es obligación del dueño, alquilar la casa con medidor puesto. En caso de cambios de domicilio, la cuenta debe quedar al día. 
+
+        </p>
+
+        
+        <a class="service-download" [href]="service.download" download>
+            <img class="download-icon" [src]="service.downloadIcon" alt="" aria-hidden="true" />
+            Descargá los requisitos
+        </a>
+    </section>
+</section>

@@ -1,0 +1,152 @@
+@use '../../../styles/variables' as *;
+
+/* =========================
+   TRABAJÁ CON NOSOTROS
+========================= */
+
+.work-with-us {
+    background-color: $color-background-gray;
+    padding-bottom: 5px;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.work-hero {
+    position: relative;
+    height: 360px;
+    overflow: hidden;
+    z-index: 1; // 🔑
+}
+
+/* Imagen principal */
+.work-hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* Lazo decorativo */
+.work-hero-ribbon {
+    position: absolute;
+    top: 50%;
+    right: -40px;
+    transform: translateY(-50%);
+    width: 520px;
+    max-width: none;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Título */
+.work-title {
+    position: absolute;
+    right: 170px;
+    bottom: 200px;
+    color: #ffffff;
+    font-size: $font-size-xl;
+    font-weight: $font-weight-regular;
+    text-align: right;
+    max-width: 420px;
+    line-height: 1.2;
+    z-index: 2;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.work-content {
+    max-width: 720px;
+    margin: -80px auto 0;
+    position: relative;
+    z-index: 2;
+    padding: 48px 32px 56px;
+    background-color: #e5e5e5;
+    border-radius: 32px 32px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+}
+
+/* Texto */
+.work-content p {
+    margin: 0;
+    max-width: 640px;
+
+    color: $color-text-dark-gray;
+    font-size: $font-size-base;
+    line-height: 1.6;
+}
+
+.work-content-wrapper {
+    position: relative;
+    z-index: 2;
+    margin-top: -80px;
+    background-color: #e5e5e5;
+    border-radius: 25px 25px 0 0;
+    margin-top: 20px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: $color-background-green;
+    color: #ffffff;
+    border: none;
+    border-radius: 999px;
+    padding: 14px 32px;
+    font-size: $font-size-base;
+    font-weight: $font-weight-semibold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary img {
+    width: 18px;
+    height: 18px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+    .work-hero {
+        height: 260px;
+    }
+
+    .work-hero-ribbon {
+        right: -40px;
+        top: 60%;
+    }
+
+    .work-title {
+        right: 255px;
+        bottom: 100px;
+        text-align: right;
+        font-size: 1.5rem; 
+        z-index: 3;
+    }
+
+    .work-content-wrapper {
+        margin-top: 0px; 
+        border-radius: 24px 24px 0 0;
+        position: relative;
+    }
+
+    .work-content {
+        margin-top: 0;
+        padding: 40px 24px 48px;
+    }
+}

@@ -30,21 +30,6 @@
 }
 
 /* Contenido */
-// .social-content {
-//     position: relative;
-//     z-index: 1;
-
-//     height: 100%;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     justify-content: center;
-//     gap: 20px;
-
-//     text-align: center;
-//     color: #ffffff;
-// }
-
 .social-content {
     position: relative;
     z-index: 1;
@@ -52,9 +37,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end; 
+    justify-content: flex-end;
     gap: 20px;
-    padding-bottom: 40px; 
+    padding-bottom: 40px;
     text-align: center;
     color: $color-text-white;
 }
@@ -97,6 +82,8 @@
 /* Caja individual */
 .social-action {
     height: 160px;
+    position: relative;
+    cursor: pointer;
 
     display: flex;
     flex-direction: column;
@@ -109,6 +96,21 @@
 
     font-size: $font-size-base;
     font-weight: $font-weight-semibold;
+
+    .text-hover {
+        display: none;
+    }
+
+    /* Desktop */
+    &:hover {
+        .text-default {
+            display: none;
+        }
+
+        .text-hover {
+            display: inline;
+        }
+    }
 }
 
 .social-action img {
@@ -160,27 +162,19 @@
     }
 
     .social-bg {
-        object-position: center 20%; 
+        object-position: center 20%;
     }
 
     .social-content {
-        justify-content: flex-end; 
-        padding-bottom: 40px; 
-        gap: 15px; 
+        justify-content: flex-end;
+        padding-bottom: 40px;
+        gap: 15px;
     }
 
-    // .social-content h3 {
-    //     font-size: $font-size-base;
-    // }
     .social-content h3 {
         font-size: $font-size-base;
         line-height: 1.2;
     }
-
-    // .social-icons img {
-    //     width: 26px;
-    //     height: 26px;
-    // }
 
     .social-icons {
         gap: 15px;
@@ -191,14 +185,6 @@
         height: 28px;
     }
 
-    // .social-actions {
-    //     grid-template-columns: 1fr;
-    // }
-
-    // .social-action {
-    //     height: 120px;
-    // }
-    /* Ocultamos o achicamos los puntos en mobile si ocupan mucho espacio */
     .social-dots {
         font-size: 18px;
         margin-top: 15px;
@@ -210,5 +196,16 @@
 
     .social-action {
         height: 120px;
+
+        &:focus,
+        &:active {
+            .text-default {
+                display: none;
+            }
+
+            .text-hover {
+                display: inline;
+            }
+        }
     }
 }

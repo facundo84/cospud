@@ -23,7 +23,8 @@ export class ServiciosComponent {
       label: 'Agua',
       fragment: 'agua',
       left: 8,
-      link: '/service-details/agua'
+      link: '/service-details/agua',
+      icon: 'icons/agua.svg'
     },
     {
       label: 'Electricidad',
@@ -35,7 +36,7 @@ export class ServiciosComponent {
       label: 'Telefonía',
       fragment: 'telefonia',
       left: 42,
-      link: '/service-details/telefonia'
+      link: '/service-details/cable'
     },
     {
       label: 'Cable',
@@ -47,10 +48,10 @@ export class ServiciosComponent {
       label: 'Internet',
       fragment: 'internet',
       left: 74,
-      link: '/service-details/internet'
+      link: '/service-details/cable'
     },
     {
-      label: 'Ambulancia / Sepelios',
+      label: 'Ambulancia</br> Sepelios',
       fragment: 'ambulancia',
       left: 92,
       link: '/service-details/sepelios'
