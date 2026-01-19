@@ -1,10 +1,9 @@
 import { Routes } from '@angular/router';
-import { ServiciosComponent } from './servicios.component';
-
+import { QuickActionsComponent } from '../quick-actions/quick-actions.component';
 
 export const SERVICIOS_ROUTES: Routes = [
   {
     path: '',
-    component: ServiciosComponent
+    component: QuickActionsComponent
   }
 ];

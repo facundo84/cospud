@@ -1,5 +1,5 @@
 <section class="services-cta" id="servicios">
-  <img class="cta-bg" [src]="baseUrl + 'images/services-cta.png'" alt="" aria-hidden="true" />
+  <img class="cta-bg" [src]="baseUrl + 'images/services-cta.png'" alt="" aria-hidden="true"/>
   <div class="cta-title">
     <h3>
       Conocé nuestros <strong>Servicios</strong>
@@ -11,45 +11,3 @@
     </a>
   </div>
 </section>
-
-<!-- <section
-  class="service-card"
-  *ngFor="let service of services"
-  [id]="service.id"
->
-  <header
-    class="service-header"
-    [style.backgroundImage]="'url(' + service.image + ')'"
-  >
-    <div class="service-header-overlay">
-      <div class="service-icon">
-        <img [src]="service.icon" [alt]="service.title" />
-      </div>
-      <h2 class="service-title">{{ service.title }}</h2>
-    </div>
-  </header>
-
-  <section class="service-description">
-    <p *ngFor="let paragraph of service.description">
-      {{ paragraph }}
-    </p>
-  </section>
-
-  <section class="service-requirements">
-    <h3>Requisitos de conexión</h3>
-
-    <ul>
-      <li *ngFor="let req of service.requirements">
-        {{ req }}
-      </li>
-    </ul>
-
-    <a
-      class="service-download"
-      [href]="service.download"
-      download
-    >
-      Descargá los requisitos
-    </a>
-  </section>
-</section> -->

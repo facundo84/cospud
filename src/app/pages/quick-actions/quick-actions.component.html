@@ -18,12 +18,25 @@
     </div>
   </div>
   <section class="institutional-hero">
-    <img class="hero-bg" [src]="baseUrl + 'images/hero-background.png'" alt="" aria-hidden="true" />
+    <img class="hero-bg" [src]="baseUrl + 'images/hero-background.png'" alt="" aria-hidden="true"/>
     <div class="hero-content">
       <h2>
         Haciendo crecer a nuestra<br />
         comunidad desde 1948
       </h2>
+    </div>
+  </section>
+  <section class="services-cta" id="servicios">
+    <img class="cta-bg" [src]="baseUrl + 'images/services-cta.png'" alt="" aria-hidden="true"/>
+    <div class="cta-title">
+      <h3>
+        Conocé nuestros <strong>Servicios</strong>
+      </h3>
+    </div>
+    <div class="cta-footer">
+      <a *ngFor="let service of services" class="cta-item" [style.left.%]="service.left"
+        [innerHTML]="service.label" [routerLink]="service.link">
+      </a>
     </div>
   </section>
 </section>
