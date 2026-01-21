@@ -37,5 +37,11 @@ export class HeaderComponent {
     }
   }
 
+  scrollToServicios(event: Event) {
+    event.preventDefault();
+    const section = document.getElementById('servicios');
+    section?.scrollIntoView({ behavior: 'smooth' });
+  }
+
   
 }
