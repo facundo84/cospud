@@ -61,6 +61,10 @@
     font-weight: $font-weight-regular;
     line-height: $line-height-heading;
     color: $color-text-white;
+
+    span {
+        font-weight: $font-weight-semibold;
+    }
 }
 
 /* Iconos redes */
@@ -161,6 +165,10 @@
 
     .social-content h3 {
         font-size: $font-size-lg;
+
+        span {
+            font-weight: $font-weight-semibold;
+        }
     }
 }
 
@@ -185,6 +193,10 @@
     .social-content h3 {
         font-size: $font-size-base;
         line-height: 1.2;
+
+        span {
+            font-weight: $font-weight-semibold;
+        }
     }
 
     .social-icons {

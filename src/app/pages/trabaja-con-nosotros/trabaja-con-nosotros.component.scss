@@ -65,6 +65,11 @@
     max-width: 420px;
     line-height: 1.2;
     z-index: 2;
+    h2{ 
+        span {
+            font-weight: $font-weight-semibold;
+        }
+    }
 }
 
 /* =========================
@@ -177,18 +182,26 @@
         //width: 320px; // Un poco más grande para que abrace mejor el texto
         right: -40px;
         top: 60%;    // Bajamos un poco el lazo también
+        width: 320px;
     }
 
     .work-title {
         /* 🔑 AJUSTES PARA BAJAR EL TEXTO */
         // right: 24px;      
         // bottom: 30px;    /* 👈 Bajamos el texto cerca del borde del hero */
-        right: 255px;
+        right: 60px;//255px;
         bottom: 100px;
         text-align: right;
         //max-width: 200px; /* Estrechamos el ancho para que quiebre en 2 líneas si es necesario */
         font-size: 1.5rem; 
         z-index: 3;
+        white-space: nowrap;
+
+        h2{ 
+            span {
+                font-weight: $font-weight-semibold;
+            }
+        }
     }
 
     .work-content-wrapper {

@@ -1,4 +1,3 @@
-
 import { Component } from '@angular/core';
 
 @Component({
@@ -11,9 +10,9 @@ import { Component } from '@angular/core';
 export class ConsultasReclamosComponent {
 
   ngAfterViewInit() {
-    const section = document.querySelector('.work-with-us') as HTMLElement;
+    const section = document.querySelector('.complaint') as HTMLElement;
     const bg = section?.dataset['bg'];
-    const bgDiv = section?.querySelector('.work-hero-bg') as HTMLElement;
+    const bgDiv = section?.querySelector('.complaint-hero-bg') as HTMLElement;
   
     if (!section || !bg || !bgDiv) return;
   
