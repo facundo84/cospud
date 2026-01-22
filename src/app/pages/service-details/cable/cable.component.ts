@@ -14,7 +14,7 @@ export class CableComponent {
     {
       id: 'cable',
       title: 'Telecomunicaciones',
-      icon: 'icons/cable.svg',
+      icon: 'icons/cable-wh.svg',
       downloadIcon: 'icons/requisitos.svg',
       image: 'images/servicio-agua.webp',
       download: 'assets/docs/requisitos-agua.pdf'
