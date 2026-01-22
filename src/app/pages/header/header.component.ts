@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -16,18 +16,8 @@ export class HeaderComponent {
   mobileOpen = false;
   showTextLogo = false;
 
-  toggleMobile(): void {
-    this.mobileOpen = !this.mobileOpen;
-  }
+  constructor(private router: Router) {}
 
-  closeMobile(): void {
-    this.mobileOpen = false;
-  }
-
-  onLogoError(): void {
-    this.showTextLogo = true;
-  }
-  
   scrollToSection(sectionId: string, event: Event) {
     event.preventDefault();
     const element = document.getElementById(sectionId);
@@ -37,11 +27,28 @@ export class HeaderComponent {
     }
   }
 
-  scrollToServicios(event: Event) {
-    event.preventDefault();
+  // scrollToServicios(event: Event) {
+  //   event.preventDefault();
+  //   const section = document.getElementById('servicios');
+  //   section?.scrollIntoView({ behavior: 'smooth' });
+  // }  
+
+  goToServicios() {
+    if (this.router.url === '/' || this.router.url.startsWith('/#')) {
+      // Ya estamos en home → solo scrollea
+      this.scrollToServicios();
+    } else {
+      // Estamos en otra ruta → navegamos primero
+      this.router.navigate(['/']).then(() => {
+        // Esperamos a que termine la navegación
+        setTimeout(() => this.scrollToServicios(), 0);
+      });
+    }
+  }
+
+  scrollToServicios() {
     const section = document.getElementById('servicios');
     section?.scrollIntoView({ behavior: 'smooth' });
   }
 
-  
 }

@@ -16,6 +16,27 @@ export class SomosComponent {
     this.baseUrl = base ?? '/';
   }
 
+  ngAfterViewInit() {
+    const hero = document.querySelector('.somos-hero') as HTMLElement;
+    const bg = hero?.dataset['bg'];
+    const bgDiv = hero?.querySelector('.somos-hero__bg') as HTMLElement;
+  
+    if (!hero || !bg || !bgDiv) return;
+  
+    const observer = new IntersectionObserver(
+      (entries, obs) => {
+        if (entries[0].isIntersecting) {
+          bgDiv.style.backgroundImage = `url(${bg})`;
+          obs.disconnect();
+        }
+      },
+      { rootMargin: '200px' }
+    );
+  
+    observer.observe(hero);
+  }
+  
+
   tabs = [
     {
       title: 'Misión',

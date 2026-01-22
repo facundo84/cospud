@@ -34,6 +34,27 @@ export class HomeComponent {
     this.baseUrl = base ?? '/';
   }
 
+  ngAfterViewInit() {
+    const section = document.querySelector('.services-cta') as HTMLElement;
+    const bg = section?.dataset['bg'];
+    const bgDiv = section?.querySelector('.cta-bg') as HTMLElement;
+
+    if (!section || !bg || !bgDiv) return;
+
+    const observer = new IntersectionObserver(
+      (entries, obs) => {
+        if (entries[0].isIntersecting) {
+          bgDiv.style.backgroundImage = `url(${bg})`;
+          obs.disconnect();
+        }
+      },
+      { rootMargin: '200px' }
+    );
+
+    observer.observe(section);
+  }
+
+
   services = [
     { label: 'Agua', left: 8, link: 'service-details/agua' },
     { label: 'Electricidad', left: 26, link: 'service-details/electricidad' },

@@ -1,4 +1,4 @@
-<section class="service-card" *ngFor="let service of services" [id]="service.id">
+<!-- <section class="service-card" *ngFor="let service of services" [id]="service.id">
     <header class="service-header" [style.backgroundImage]="'url(' + service.image + ')'">
         <div class="service-header-overlay">
             <div class="service-icon">
@@ -6,10 +6,23 @@
             </div>
             <h2 class="service-title">{{ service.title }}</h2>
         </div>
+    </header> -->
+<section class="service-card" *ngFor="let service of services" [id]="service.id">
+
+    <header class="service-header" [attr.data-bg]="service.image">
+
+        <div class="service-header-overlay">
+            <div class="service-icon">
+                <img [src]="service.icon" [alt]="service.title" loading="lazy" />
+            </div>
+
+            <h2 class="service-title">{{ service.title }}</h2>
+        </div>
+
     </header>
 
     <section class="service-description">
-         <p>El agua potable es un recurso <span>esencial para la vida</span>. COSPUD realiza la captación, tratamiento
+        <p>El agua potable es un recurso <span>esencial para la vida</span>. COSPUD realiza la captación, tratamiento
             almacenamiento y distribución del agua en Despeñaderos, garantizando su potabilidad mediante periódicos
             <span>controles fisicoquímicos y bacteriológicos</span>.
         </p>

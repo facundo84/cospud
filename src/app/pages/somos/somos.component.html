@@ -1,5 +1,15 @@
-<section class="somos-hero">
+<!-- <section class="somos-hero">
   <div class="somos-hero__bg" [style.backgroundImage]="'url(' + baseUrl + 'images/lazo-somos-voz.png)'"></div>
+
+  <div class="somos-hero__content">
+    <h1>
+      Haciendo crecer nuestra<br />
+      comunidad desde 1948.
+    </h1>
+  </div>
+</section> -->
+<section class="somos-hero" data-bg="images/lazo-somos-voz.webp">
+  <div class="somos-hero__bg"></div>
 
   <div class="somos-hero__content">
     <h1>
@@ -16,9 +26,11 @@
           <span class="tab-title">{{ tab.title }}</span>
 
           <span class="tab-icon">
-            <img [src]="activeIndex === i 
+            <!-- <img [src]="activeIndex === i 
           ? 'icons/menos.svg' 
-          : 'icons/mas.svg'" alt="" aria-hidden="true" />
+          : 'icons/mas.svg'" alt="" aria-hidden="true" /> -->
+            <img [src]="activeIndex === i ? 'icons/menos.svg' : 'icons/mas.svg'" alt="" aria-hidden="true"
+              loading="lazy" />
           </span>
         </div>
       </button>
@@ -33,6 +45,10 @@
     </div>
   </div>
   <div class="somos-image">
-    <img [src]="baseUrl + 'images/somos-voz.png'" alt="Somos COSPUD" />
+    <!-- <img [src]="baseUrl + 'images/somos-voz.png'" alt="Somos COSPUD" /> -->
+    <picture>
+      <source [srcset]="baseUrl + 'images/somos-voz.webp'" type="image/webp" />
+      <img [src]="baseUrl + 'images/somos-voz.png'" alt="Somos COSPUD" loading="lazy" decoding="async" />
+    </picture>
   </div>
 </section>

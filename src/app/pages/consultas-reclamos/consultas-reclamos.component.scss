@@ -17,18 +17,27 @@
     position: relative;
     height: 360px;
     overflow: hidden;
-    z-index: 1; // 🔑
+    z-index: 1;
 }
 
 /* Imagen principal */
+// .work-hero-bg {
+//     position: absolute;
+//     inset: 0;
+//     width: 100%;
+//     height: 100%;
+//     object-fit: cover;
+//     z-index: 0;
+// }
 .work-hero-bg {
     position: absolute;
     inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
     z-index: 0;
-}
+  
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 
 /* Lazo decorativo */
 .work-hero-ribbon {

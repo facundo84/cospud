@@ -1,4 +1,4 @@
-<section class="service-card" *ngFor="let service of services" [id]="service.id">
+<!-- <section class="service-card" *ngFor="let service of services" [id]="service.id">
     <header class="service-header" [style.backgroundImage]="'url(' + service.image + ')'">
         <div class="service-header-overlay">
             <div class="service-icon">
@@ -7,8 +7,20 @@
             <h2 class="service-title">{{ service.title }}</h2>
 
         </div>
-    </header>
+    </header> -->
+<section class="service-card" *ngFor="let service of services" [id]="service.id">
 
+    <header class="service-header" [attr.data-bg]="service.image">
+
+        <div class="service-header-overlay">
+            <div class="service-icon">
+                <img [src]="service.icon" [alt]="service.title" loading="lazy" />
+            </div>
+
+            <h2 class="service-title">{{ service.title }}</h2>
+        </div>
+
+    </header>
     <section class="service-description">
         <h4>Internet por Fibra Óptica + Televisión Digital</h4>
         <p>Servicio de conectividad de alta velocidad por fibra óptica directa al hogar. Incluye televisión digital con

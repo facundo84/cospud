@@ -18,7 +18,25 @@
     </div>
   </div>
   <section class="institutional-hero">
-    <img class="hero-bg" [src]="baseUrl + 'images/hero-background.png'" alt="" aria-hidden="true"/>
+    <!-- <img class="hero-bg" [src]="baseUrl + 'images/hero-background.png'" alt="" aria-hidden="true"/> -->
+    <picture>
+      <source
+        [srcset]="baseUrl + 'images/hero-background.webp'"
+        type="image/webp"
+      />
+      <source
+        [srcset]="baseUrl + 'images/hero-background.png'"
+        type="image/png"
+      />
+      <img
+        class="hero-bg"
+        [src]="baseUrl + 'images/hero-background.png'"
+        alt=""
+        aria-hidden="true"
+        fetchpriority="high"
+        decoding="async"
+      />
+    </picture>
     <div class="hero-content">
       <h2>
         Haciendo crecer a nuestra<br />

@@ -16,4 +16,27 @@ export class SomosVozComponent {
     this.baseUrl = base ?? '/';
   }
 
+  ngAfterViewInit() {
+    const section = document.querySelector('.somos-voz') as HTMLElement;
+  
+    if (!section) return;
+  
+    const observer = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const bg = section.dataset['bg'];
+            if (bg) {
+              section.style.backgroundImage = `url(${bg})`;
+            }
+            obs.disconnect();
+          }
+        });
+      },
+      { rootMargin: '200px' }
+    );
+  
+    observer.observe(section);
+  }
+
 }

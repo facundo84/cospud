@@ -23,15 +23,24 @@
 }
 
 /* ===== Fondo ===== */
+// .cta-bg {
+//   position: absolute;
+//   inset: 0;
+//   width: 100%;
+//   height: auto;
+
+//   object-fit: cover;
+//   object-position: center 80%;
+//   padding-top: 80px;
+// }
 .cta-bg {
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: auto;
-
-  object-fit: cover;
-  object-position: center 80%;
-  padding-top: 80px;
+  z-index: 0;
+  
+  background-repeat: no-repeat;
+  background-size: contain;          // 🔑 iguala al <img>
+  background-position: center 50%;   // mismo encuadre
 }
 
 /* ===== Título ===== */

@@ -18,7 +18,7 @@
     <a routerLink="/somos" routerLinkActive="active" (click)="menuToggle.checked = false">Somos Voz</a>
     <a routerLink="/trabaja-con-nosotros" routerLinkActive="active" (click)="menuToggle.checked = false">Trabajá con
       nosotros</a>
-    <a href="#" (click)="scrollToServicios($event); menuToggle.checked = false">
+    <a (click)="goToServicios(); menuToggle.checked = false">
       Servicios
     </a>
     <a href="#" class="autogestion" (click)="scrollToSection('autogestion', $event); menuToggle.checked = false">
