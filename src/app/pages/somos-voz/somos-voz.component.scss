@@ -15,8 +15,8 @@
 /* ===== Lazo ===== */
 .somos-voz-ribbon {
   position: absolute;
-  top: 50%;
-  right: 120px;
+  top: 65%; //50%;
+  right: 0px; //120px;
   transform: translateY(-50%);
 
   width: 520px;
@@ -29,8 +29,8 @@
 /* ===== Contenido sobre el lazo ===== */
 .somos-voz-content {
   position: absolute;
-  top: 46%;
-  right: 170px;
+  top: 57%; //46%;
+  right: 61px; //170px;
   transform: translateY(-50%);
   width: 320px;
   text-align: left;
@@ -60,6 +60,8 @@
   font-size: 0.9rem;
   font-weight: $font-weight-regular;
   text-decoration: none;
+  position: relative;
+  z-index: 10;
 }
 
 .btn-primary:hover {
@@ -67,34 +69,131 @@
 }
 
 @media (max-width: 1024px) {
-  .somos-voz-ribbon,
-  .somos-voz-content {
-    right: 80px;
+  .somos-voz {
+    height: 460px;
+    background-position: 65% center;
   }
 
   .somos-voz-ribbon {
-    width: 440px;
+    width: 420px;
+    right: -30px;
+    top: 66%;
+  }
+
+  .somos-voz-content {
+    right: 32px;
+    width: 280px;
+    top: 60%;
+  }
+
+  .somos-voz-content h1 {
+    font-size: 1.5rem;
   }
 }
+
+@media (max-width: 480px) {
+  .somos-voz {
+    height: 380px;
+  }
+
+  .somos-voz-ribbon {
+    width: 300px;
+    right: -60px;
+    top: 72%;
+  }
+
+  .somos-voz-content {
+    width: 210px;
+    right: -40px;
+    top: 66%;
+  }
+
+  .somos-voz-content h1 {
+    font-size: 0.95rem;
+  }
+}
+
+
+// @media (max-width: 768px) {
+//   .somos-voz {
+//     height: 420px;
+//     background-position: 70% center;
+//   }
+
+//   /* ===== Lazo ===== */
+//   .somos-voz-ribbon {
+//     width: 360px;
+//     top: 70%;
+//     right: -40px;
+//     transform: translateY(-50%);
+//   }
+
+//   /* ===== Contenido ===== */
+//   .somos-voz-content {
+//     top: 64%;
+//     right: -25px;
+//     width: 240px;
+//     transform: translateY(-50%);
+//   }
+
+//   .somos-voz-content h1 {
+//     font-size: $font-size-base;
+//   }
+
+//   /* ===== Botón ===== */
+//   .btn-primary {
+//     display: inline-block;
+//     background-color: #9ccf3a;
+//     color: #FFF;
+//     padding: 5px 20px;
+//     border-radius: 20px;
+//     font-size: 0.9rem;
+//     font-weight: $font-weight-regular;
+//     text-decoration: none;
+//   }
+// }
 
 @media (max-width: 768px) {
   .somos-voz {
     height: 420px;
+    background-position: 70% center;
   }
 
   .somos-voz-ribbon {
     width: 360px;
-    right: 50%;
-    transform: translate(50%, -50%);
+    top: 70%;
+    right: -40px;
   }
 
   .somos-voz-content {
-    right: 50%;
-    transform: translate(50%, -50%);
-    width: 260px;
+    top: 64%;
+    right: -25px;
+    width: 240px;
   }
 
   .somos-voz-content h1 {
-    font-size: 1.4rem;
+    font-size: $font-size-base;
+  }
+
+  .btn-primary {
+    padding: 5px 20px;
+    font-size: 0.85rem;
+  }
+}
+
+
+@media (max-width: 1280px) {
+  .somos-voz {
+    height: 480px;
+  }
+
+  .somos-voz-ribbon {
+    width: 480px;
+    right: -20px;
+  }
+
+  .somos-voz-content {
+    right: 5px;
+    width: 300px;
   }
 }

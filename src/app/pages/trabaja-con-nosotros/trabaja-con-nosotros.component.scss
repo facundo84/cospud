@@ -89,6 +89,10 @@
     align-items: center;
     gap: 24px;
     text-align: center;
+
+    a {
+        text-decoration: none;
+    }
 }
 
 /* Texto */
@@ -214,5 +218,9 @@
     .work-content {
         margin-top: 0;
         padding: 40px 24px 48px;
+
+        a {
+            text-decoration: none;
+        }
     }
 }

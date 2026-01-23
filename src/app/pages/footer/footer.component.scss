@@ -14,12 +14,24 @@
 //   background-color: $color-background-dark-blue;
 //   padding: 45px 0 15px 0;
 // }
+
 .footer-main {
   background-color: $color-background-dark-blue;
   padding: 45px 0 0 0;
   position: relative;
   overflow: hidden;
 }
+
+// .footer-container {
+//   max-width: $max-width;
+//   margin: 0 auto;
+//   padding: 0 32px;
+
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   gap: 64px;
+// }
 
 .footer-container {
   max-width: $max-width;
@@ -30,34 +42,68 @@
   justify-content: space-between;
   align-items: center;
   gap: 64px;
+
+  position: relative;
+  z-index: 2;
 }
 
 /* =========================
    BRAND
 ========================= */
+// .footer-brand {
+//   position: relative;
+//   display: flex;
+//   align-items: anchor-center;
+//   min-height: 180px;
+// }
+
 .footer-brand {
   position: relative;
   display: flex;
-  align-items: anchor-center;
+  align-items: center;
   min-height: 180px;
+  z-index: 2; // contenido por arriba del shape
 }
+
+// .footer-shape {
+//   position: absolute;
+//   left: -109px;
+//   bottom: 0;
+//   width: 470px;
+//   height: auto;
+//   pointer-events: none;
+//   z-index: 0;
+//   transform: none;
+// }
+// .footer-shape {
+//   position: absolute;
+//   left: 0;              // 🔥 pegada al borde real
+//   bottom: 0;
+
+//   width: 470px;
+//   height: auto;
+
+//   pointer-events: none;
+//   z-index: 0;
+// }
+
+// .footer-logo {
+//   position: relative;
+//   z-index: 2;
+//   padding-left: 90px;
+//   padding-bottom: 20px;
+// }
 
 .footer-shape {
   position: absolute;
-  left: -109px;
+  left: 0;
   bottom: 0;
+
   width: 470px;
   height: auto;
+
   pointer-events: none;
   z-index: 0;
-  transform: none;
-}
-
-.footer-logo {
-  position: relative;
-  z-index: 2;
-  padding-left: 90px;
-  padding-bottom: 20px;
 }
 
 .footer-logo img {

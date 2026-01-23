@@ -1,10 +1,11 @@
 import { CommonModule, DOCUMENT, NgOptimizedImage } from '@angular/common';
 import { Component, Inject } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-somos-voz',
   standalone: true,
-  imports: [CommonModule, NgOptimizedImage],
+  imports: [CommonModule, NgOptimizedImage, RouterModule],
   templateUrl: './somos-voz.component.html',
   styleUrl: './somos-voz.component.scss'
 })
