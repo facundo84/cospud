@@ -1,0 +1,58 @@
+# ===============================
+# ANGULAR SPA ROUTING
+# ===============================
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # No reescribir archivos o carpetas reales
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Todo lo demás va a index.html
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+# ===============================
+# CACHE AGRESIVO PARA IMÁGENES
+# ===============================
+<IfModule mod_headers.c>
+  <FilesMatch "\.(avif|webp|png|jpg|jpeg|svg|ico)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>
+
+# ===============================
+# CACHE PARA CSS Y JS
+# ===============================
+<IfModule mod_headers.c>
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>
+
+# ===============================
+# HTML SIN CACHE (IMPORTANTE)
+# ===============================
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html)$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+# ===============================
+# COMPRESIÓN GZIP
+# ===============================
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json
+</IfModule>
+
+# ===============================
+# SEGURIDAD BÁSICA (OPCIONAL)
+# ===============================
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set X-XSS-Protection "1; mode=block"
+</IfModule>
