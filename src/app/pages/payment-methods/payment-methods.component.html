@@ -9,7 +9,7 @@
                 <h4>Efectivo en la Cooperativa.</h4>
                 <p>Tarjeta de crédito | débito.</p>
             </div>
-            <div class="payment-column payment-column--bank">
+            <!-- <div class="payment-column payment-column--bank">
                 <span class="payment-label">Transferencia bancaria</span>
 
                 <span class="payment-separator">|</span>
@@ -18,7 +18,24 @@
                     Datos de la cuenta<br />
                     para la transferencia.
                 </span>
+            </div> -->
+            <div class="payment-column payment-column--bank">
+                <span class="payment-label">Transferencia bancaria</span>
+                <span class="payment-separator" aria-hidden="true">|</span>
+
+                <div class="payment-bank-data">
+                    <span>Alias: COSPUD</span>
+
+                    <a
+                      class="payment-mail"
+                      href="mailto:tramitescospud@gmail.com"
+                      (click)="copyEmail($event)"
+                    >
+                    Enviar comprobante a: <strong>tramitescospud&#64;gmail.com</strong>
+                    </a>
+                  </div>
             </div>
+
         </div>
         <div class="payment-footer">
             <p>

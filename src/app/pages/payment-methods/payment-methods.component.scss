@@ -71,35 +71,62 @@
 /* Link visual (aunque no sea <a>) */
 .payment-link {
     font-style: italic;
-    text-decoration: underline;
+    text-decoration: none;
     cursor: pointer;
 }
 
 /* =========================
    COLUMNA DERECHA (BANCO)
 ========================= */
-
 .payment-column--bank {
     display: grid;
     grid-template-columns: auto 12px 1fr;
+    align-items: stretch; // 🔥 clave
     column-gap: 12px;
-    align-items: start;
+}
+
+.payment-bank-data {
+    grid-row: 1 / span 3;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    font-size: $font-size-base;
+    line-height: 1.4;
+    font-style: italic;
 }
 
 /* Texto izquierdo */
 .payment-label {
+    grid-row: 1;
     font-size: $font-size-base;
     font-weight: $font-weight-semibold;
-    color: #ffffff;
     white-space: nowrap;
+    color: #ffffff;
+}
+
+.payment-mail {
+    color: #ffffff;
+    font-style: italic;
+    text-decoration: none;
+    cursor: pointer;
+
+    strong {
+        font-weight: $font-weight-semibold;
+    }
+
+    &:hover {
+        opacity: 0.85;
+    }
 }
 
 .payment-separator {
-    display: flex;
-    align-items: center;
-    font-size: $font-size-base;
-    font-weight: $font-weight-regular;
-    color: #ffffff;
+    grid-row: 1 / span 3;
+    width: 2px;
+    background-color: #ffffff;
+    opacity: 0.9;
+    justify-self: center;
 }
 
 /* Texto derecho */
@@ -156,6 +183,11 @@
 
     .payment-header h2 {
         font-size: $font-size-base;
+    }
+
+    .payment-bank-details {
+        font-size: 0.75rem;
+        line-height: 1.2;
     }
 
     .payment-column--bank {

@@ -16,8 +16,8 @@ export class CableComponent {
       title: 'Telecomunicaciones',
       icon: 'icons/cable-wh.svg',
       downloadIcon: 'icons/requisitos.svg',
-      image: 'images/servicio-agua.webp',
-      download: 'assets/docs/requisitos-agua.pdf'
+      image: 'images/servicio-telecomunicaciones.webp',
+      download: 'assets/docs/requisitos-servicios.pdf'
     }
   ];
 

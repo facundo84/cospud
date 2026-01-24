@@ -14,10 +14,10 @@ export class SepeliosComponent {
     {
       id: 'sepelios',
       title: 'Servicio de Ambulancia y Sepelio',
-      icon: 'icons/agua.svg',
+      icon: 'icons/sepelio.svg',
       downloadIcon: 'icons/requisitos.svg',
-      image: 'images/servicio-agua.webp',
-      download: 'assets/docs/requisitos-agua.pdf'
+      image: 'images/servicio-sepelio.webp',
+      download: 'assets/docs/requisitos-servicios.pdf'
     }
   ];
 

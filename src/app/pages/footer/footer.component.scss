@@ -62,7 +62,8 @@
   display: flex;
   align-items: center;
   min-height: 180px;
-  z-index: 2; // contenido por arriba del shape
+  z-index: 2;
+  margin-left:100px;
 }
 
 // .footer-shape {

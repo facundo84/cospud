@@ -17,7 +17,7 @@ export class AguaComponent {
       icon: 'icons/agua.svg',
       downloadIcon: 'icons/requisitos.svg',
       image: 'images/servicio-agua.webp',
-      download: 'assets/docs/requisitos-agua.pdf'
+      download: 'assets/docs/requisitos-servicios.pdf'
     }
   ];
 

@@ -25,11 +25,11 @@
 .services-cta {
   position: relative;
   width: 100%;
-  min-height: 320px; // 🔑 más aire general
+  min-height: 340px;
   overflow: hidden;
 
-  padding-top: 48px;     // 🔼 espacio superior
-  padding-bottom: 140px; // 🔽 espacio inferior
+  padding-top: 48px;
+  padding-bottom: 140px;
 
   scroll-margin-top: $header-height;
   background-color: $color-background-dark-blue;
@@ -204,7 +204,7 @@
   }
 
   .cta-title {
-      padding-top: 15px;
+      padding-top: 20px;
 
       h3 {
           font-size: $font-size-base;

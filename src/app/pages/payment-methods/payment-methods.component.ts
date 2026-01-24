@@ -8,5 +8,15 @@ import { Component } from '@angular/core';
   styleUrl: './payment-methods.component.scss'
 })
 export class PaymentMethodsComponent {
-
+  copyEmail(event: Event): void {
+    event.preventDefault(); // evita navegación inmediata
+  
+    const email = 'tramitescospud@gmail.com';
+  
+    navigator.clipboard.writeText(email).then(() => {
+      // abre el mail luego de copiar
+      window.location.href = `mailto:${email}`;
+    });
+  }
+  
 }

@@ -16,8 +16,8 @@ export class ElectricidadComponent {
       title: 'Electricidad',
       icon: 'icons/electricidad.svg',
       downloadIcon: 'icons/requisitos.svg',
-      image: 'images/servicio-agua.webp',
-      download: 'assets/docs/requisitos-agua.pdf'
+      image: 'images/servicio-electricidad.webp',
+      download: 'assets/docs/requisitos-servicios.pdf'
     }
   ];
 
