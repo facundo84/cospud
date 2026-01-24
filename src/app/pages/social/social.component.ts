@@ -20,9 +20,9 @@ export class SocialComponent {
     const section = document.querySelector('.social-section') as HTMLElement;
     const bg = section?.dataset['bg'];
     const bgDiv = section?.querySelector('.social-bg') as HTMLElement;
-  
+
     if (!section || !bg || !bgDiv) return;
-  
+
     const observer = new IntersectionObserver(
       (entries, obs) => {
         if (entries[0].isIntersecting) {
@@ -32,8 +32,8 @@ export class SocialComponent {
       },
       { rootMargin: '200px' }
     );
-  
+
     observer.observe(section);
   }
-  
+
 }

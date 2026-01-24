@@ -11,7 +11,7 @@ import { RouterModule } from '@angular/router';
 })
 export class SomosVozComponent {
   baseUrl = '';
-  
+
   constructor(@Inject(DOCUMENT) private document: Document) {
     const base = this.document.querySelector('base')?.getAttribute('href');
     this.baseUrl = base ?? '/';
@@ -19,9 +19,9 @@ export class SomosVozComponent {
 
   ngAfterViewInit() {
     const section = document.querySelector('.somos-voz') as HTMLElement;
-  
+
     if (!section) return;
-  
+
     const observer = new IntersectionObserver(
       (entries, obs) => {
         entries.forEach(entry => {
@@ -36,7 +36,7 @@ export class SomosVozComponent {
       },
       { rootMargin: '200px' }
     );
-  
+
     observer.observe(section);
   }
 

@@ -54,7 +54,6 @@ export class HomeComponent {
     observer.observe(section);
   }
 
-
   services = [
     { label: 'Agua', left: 8, link: 'service-details/agua' },
     { label: 'Electricidad', left: 26, link: 'service-details/electricidad' },

@@ -3,9 +3,6 @@
 .somos-voz {
   position: relative;
   height: 520px;
-
-  //background-image: url('/images/trabaja-con-nosotros.png');
-  //background-image: url('images/trabaja-con-nosotros.png');
   background-size: cover;
   background-position: 60% center;
 
@@ -15,8 +12,8 @@
 /* ===== Lazo ===== */
 .somos-voz-ribbon {
   position: absolute;
-  top: 65%; //50%;
-  right: 0px; //120px;
+  top: 65%;
+  right: 0px;
   transform: translateY(-50%);
 
   width: 520px;
@@ -29,8 +26,8 @@
 /* ===== Contenido sobre el lazo ===== */
 .somos-voz-content {
   position: absolute;
-  top: 57%; //46%;
-  right: 61px; //170px;
+  top: 57%;
+  right: 61px;
   transform: translateY(-50%);
   width: 320px;
   text-align: left;
@@ -112,46 +109,6 @@
     font-size: 0.95rem;
   }
 }
-
-
-// @media (max-width: 768px) {
-//   .somos-voz {
-//     height: 420px;
-//     background-position: 70% center;
-//   }
-
-//   /* ===== Lazo ===== */
-//   .somos-voz-ribbon {
-//     width: 360px;
-//     top: 70%;
-//     right: -40px;
-//     transform: translateY(-50%);
-//   }
-
-//   /* ===== Contenido ===== */
-//   .somos-voz-content {
-//     top: 64%;
-//     right: -25px;
-//     width: 240px;
-//     transform: translateY(-50%);
-//   }
-
-//   .somos-voz-content h1 {
-//     font-size: $font-size-base;
-//   }
-
-//   /* ===== Botón ===== */
-//   .btn-primary {
-//     display: inline-block;
-//     background-color: #9ccf3a;
-//     color: #FFF;
-//     padding: 5px 20px;
-//     border-radius: 20px;
-//     font-size: 0.9rem;
-//     font-weight: $font-weight-regular;
-//     text-decoration: none;
-//   }
-// }
 
 @media (max-width: 768px) {
   .somos-voz {

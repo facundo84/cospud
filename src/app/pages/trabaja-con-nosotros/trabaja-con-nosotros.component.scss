@@ -21,15 +21,6 @@
 }
 
 /* Imagen principal */
-// .work-hero-bg {
-//     position: absolute;
-//     inset: 0;
-//     width: 100%;
-//     height: 100%;
-//     object-fit: cover;
-//     z-index: 0;
-// }
-
 .work-hero-bg {
     position: absolute;
     inset: 0;
@@ -146,37 +137,6 @@
 /* =========================
    RESPONSIVE
 ========================= */
-
-// @media (max-width: 768px) {
-//     .work-hero {
-//         height: 260px;
-//     }
-
-//     .work-hero-ribbon {
-//         width: 260px;
-//         right: -30px;
-//     }
-
-//     .work-title {
-//         right: 24px;
-//         font-size: $font-size-lg;
-//     }
-
-//     .work-content {
-//         margin-top: -48px;
-//         padding: 32px 24px 48px;
-//         border-radius: 24px 24px 0 0;
-//     }
-
-//     .work-content-wrapper {
-//         margin-top: -56px;
-//         border-radius: 24px 24px 0 0;
-//     }
-// }
-/* =========================
-   RESPONSIVE
-========================= */
-
 @media (max-width: 768px) {
     .work-hero {
         height: 260px;
@@ -191,12 +151,9 @@
 
     .work-title {
         /* 🔑 AJUSTES PARA BAJAR EL TEXTO */
-        // right: 24px;      
-        // bottom: 30px;    /* 👈 Bajamos el texto cerca del borde del hero */
         right: 60px;//255px;
         bottom: 100px;
         text-align: right;
-        //max-width: 200px; /* Estrechamos el ancho para que quiebre en 2 líneas si es necesario */
         font-size: 1.5rem; 
         z-index: 3;
         white-space: nowrap;
@@ -209,7 +166,6 @@
     }
 
     .work-content-wrapper {
-        /* Ajustamos el solapamiento para que no tape el título si este bajó mucho */
         margin-top: 0px; 
         border-radius: 24px 24px 0 0;
         position: relative;

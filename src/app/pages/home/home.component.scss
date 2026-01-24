@@ -14,14 +14,6 @@
    CTA SERVICIOS (FULL WIDTH + PNG)
 ========================= */
 /* ===== CONTENEDOR ===== */
-// .services-cta {
-//   position: relative;
-//   width: 100%;
-//   height: 260px;
-//   background-color: $color-background-dark-blue;
-//   overflow: hidden;
-// }
-
 .services-cta {
   position: relative;
   width: 100%;
@@ -36,24 +28,14 @@
 }
 
 /* ===== Fondo ===== */
-// .cta-bg {
-//   position: absolute;
-//   inset: 0;
-//   width: 100%;
-//   height: auto;
-
-//   object-fit: cover;
-//   object-position: center 80%;
-//   padding-top: 80px;
-// }
 .cta-bg {
   position: absolute;
   inset: 0;
   z-index: 0;
   
   background-repeat: no-repeat;
-  background-size: contain;          // 🔑 iguala al <img>
-  background-position: center 50%;   // mismo encuadre
+  background-size: contain;
+  background-position: center 50%;
 }
 
 /* ===== Título ===== */

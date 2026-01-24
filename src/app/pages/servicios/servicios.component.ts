@@ -57,7 +57,7 @@ export class ServiciosComponent {
       link: '/service-details/sepelios'
     }
   ];
-  
+
 
   // services = [
   //   {
@@ -92,5 +92,5 @@ export class ServiciosComponent {
   //     download: 'assets/docs/requisitos-electricidad.pdf'
   //   }
   // ];
-  
+
 }

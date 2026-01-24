@@ -27,20 +27,11 @@ export class HeaderComponent {
     }
   }
 
-  // scrollToServicios(event: Event) {
-  //   event.preventDefault();
-  //   const section = document.getElementById('servicios');
-  //   section?.scrollIntoView({ behavior: 'smooth' });
-  // }  
-
   goToServicios() {
     if (this.router.url === '/' || this.router.url.startsWith('/#')) {
-      // Ya estamos en home → solo scrollea
       this.scrollToServicios();
     } else {
-      // Estamos en otra ruta → navegamos primero
       this.router.navigate(['/']).then(() => {
-        // Esperamos a que termine la navegación
         setTimeout(() => this.scrollToServicios(), 0);
       });
     }

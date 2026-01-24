@@ -4,7 +4,6 @@
    PAYMENT METHODS
 ========================= */
 .payment-methods {
-    //width: 100%;
     padding: 16px 16px;
     display: flex;
     justify-content: center;
@@ -68,7 +67,7 @@
     line-height: 1.4;
 }
 
-/* Link visual (aunque no sea <a>) */
+/* Link visual */
 .payment-link {
     font-style: italic;
     text-decoration: none;
@@ -81,17 +80,15 @@
 .payment-column--bank {
     display: grid;
     grid-template-columns: auto 12px 1fr;
-    align-items: stretch; // 🔥 clave
+    align-items: stretch;
     column-gap: 12px;
 }
 
 .payment-bank-data {
     grid-row: 1 / span 3;
-
     display: flex;
     flex-direction: column;
     gap: 4px;
-
     font-size: $font-size-base;
     line-height: 1.4;
     font-style: italic;

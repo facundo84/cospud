@@ -126,13 +126,17 @@
     border-radius: 0 0 0px 0px;
     padding: 0 280px 45px;
 
+    a {
+        cursor: pointer;
+    }
+
 }
 
 /* ===== BOTÓN DESCARGA ===== */
 .service-download {
     display: flex;
     width: fit-content;
-    margin: 0 auto; // ⬅️ clave
+    margin: 0 auto; 
     align-items: center;
     gap: 8px;
     padding: 12px 24px;

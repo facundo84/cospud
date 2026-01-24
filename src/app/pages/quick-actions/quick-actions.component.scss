@@ -18,7 +18,6 @@
 .actions-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    //width: 100%;
 }
 
 /* ===== ITEM ===== */
@@ -62,9 +61,6 @@
    HERO INSTITUCIONAL
 ========================= */
 .institutional-hero {
-    // position: relative;
-    // width: 100%;
-    // overflow: hidden;
     position: relative;
     width: 100%;
     height: 600px;
@@ -73,13 +69,10 @@
 
 /* Imagen manda el alto */
 .hero-bg {
-    // width: 100%;
-    // height: auto;
-    // display: block;
     width: 100%;
-    height: 100%;        // 👈 clave
-    object-fit: cover;   // 👈 no se deforma
-    object-position: top; // 👈 empieza desde arriba
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
     display: block;
 }
 
@@ -208,7 +201,6 @@
 
     @media (orientation: landscape) {
         .hero-bg {
-            //max-height: 70vh;
             object-fit: cover;
         }
     }

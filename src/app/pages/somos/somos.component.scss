@@ -199,99 +199,59 @@
 }
 
 @media (max-width: 768px) {
-  // .somos-hero__bg {
-  //   background-size: 85%;
-  // }
+  .somos-hero {
+    height: 260px;
+  }
 
-  // .somos-hero {
-  //   height: 260px;
-  // }
+  .somos-hero__bg {
+    background-size: 65%;
+    background-position: center 0%;
+  }
 
-  // .tab-panel p {
-  //   padding: 20px 24px;
-  //   line-height: 1.6;
-  // }
+  .somos-hero__content h1 {
+    font-size: 1.5rem;
+    padding: 0 20px;
+  }
 
-  // .tab-inner {
-  //   max-width: 100%;
-  //   padding: 0 24px;
-  //   gap: 16px;
-  // }
+  /* --- Ajustes de Contenido de Tabs --- */
+  .tab-inner {
+    max-width: 100%;
+    padding: 0 24px;
+    gap: 16px;
+  }
 
-  // .tab-header {
-  //   padding: 20px 0;
-  //   font-size: $font-size-base;
-  // }
+  .tab-content {
+    /* 🔑 Eliminamos paddings extraños y permitimos que el flex maneje los párrafos */
+    padding: 10px 24px 30px;
+    gap: 12px;
+  }
 
-  // .somos-image {
-  //   margin-top: 32px;
-  //   padding-bottom: 48px;
-  // }
+  .tab-panel p {
+    padding: 0;
+    /* Reseteamos el padding anterior para que use el del contenedor */
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
 
-  // .somos-image img {
-  //   max-width: 100%;
-  //   padding: 0 24px;
-  //   height: 180px;
-  // }
-  @media (max-width: 768px) {
-    .somos-hero {
-      height: 260px;
-    }
+  .tab-header {
+    padding: 22px 0;
+    font-size: $font-size-base;
+  }
 
-    .somos-hero__bg {
-      // background-size: 85%;
-      // background-position: center 40%;
-      background-size: 65%;
-      background-position: center 0%;
-    }
+  /* --- IMAGEN SOMOS-VOZ (Corrección Ancho 100%) --- */
+  .somos-image {
+    margin-top: 0;
+    padding-bottom: 0;
+    width: 100%;
+  }
 
-    .somos-hero__content h1 {
-      font-size: 1.5rem;
-      padding: 0 20px;
-    }
-
-    /* --- Ajustes de Contenido de Tabs --- */
-    .tab-inner {
-      max-width: 100%;
-      padding: 0 24px;
-      gap: 16px;
-    }
-
-    .tab-content {
-      /* 🔑 Eliminamos paddings extraños y permitimos que el flex maneje los párrafos */
-      padding: 10px 24px 30px;
-      gap: 12px;
-    }
-
-    .tab-panel p {
-      padding: 0;
-      /* Reseteamos el padding anterior para que use el del contenedor */
-      font-size: 0.95rem;
-      line-height: 1.5;
-    }
-
-    .tab-header {
-      padding: 22px 0;
-      font-size: $font-size-base;
-    }
-
-    /* --- IMAGEN SOMOS-VOZ (Corrección Ancho 100%) --- */
-    .somos-image {
-      margin-top: 0;
-      padding-bottom: 0;
-      width: 100%;
-    }
-
-    .somos-image img {
-      /* 🔑 Eliminamos el padding lateral de 24px para que sea 100% real */
-      padding: 0;
-      max-width: 100%;
-      width: 100%;
-      height: auto;
-      /* Dejamos que la proporción sea natural */
-      aspect-ratio: 16 / 9;
-      /* Opcional: define una proporción fija */
-      object-fit: cover;
-    }
+  .somos-image img {
+    /* 🔑 Eliminamos el padding lateral de 24px para que sea 100% real */
+    padding: 0;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
   }
 }

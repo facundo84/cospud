@@ -88,6 +88,10 @@
     }
 }
 
+.service-requirements a {
+    cursor: pointer;
+}
+
 /* ===== BOTÓN DESCARGA ===== */
 .service-download {
     display: flex;
@@ -125,7 +129,7 @@
 
     /* ===== HEADER ===== */
     .service-header {
-        padding-top: 56.25%; // más alto en mobile
+        padding-top: 56.25%;
     }
 
     .service-header-overlay {

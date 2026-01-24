@@ -11,12 +11,12 @@ export class TrabajaConNosotrosComponent {
   ngAfterViewInit() {
     const section = document.querySelector('.work-with-us') as HTMLElement;
     if (!section) return;
-  
+
     const bgDiv = section.querySelector('.work-hero-bg') as HTMLElement;
     const bg = section.dataset['bg'];
-  
+
     if (!bg || !bgDiv) return;
-  
+
     const observer = new IntersectionObserver(
       (entries, obs) => {
         if (entries[0].isIntersecting) {
@@ -26,8 +26,8 @@ export class TrabajaConNosotrosComponent {
       },
       { rootMargin: '200px' }
     );
-  
+
     observer.observe(section);
   }
-  
+
 }

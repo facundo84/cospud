@@ -15,7 +15,7 @@
 
   /* Desktop */
   grid-template-columns: repeat(5, 1fr);
-  gap: 0; // ✅ SIN espacios entre cards
+  gap: 0;
 }
 
 /* ===== COLORES ===== */
@@ -29,7 +29,7 @@
 @media (max-width: 1200px) {
   .grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 0; // sigue sin separación
+    gap: 0;
   }
 }
 
