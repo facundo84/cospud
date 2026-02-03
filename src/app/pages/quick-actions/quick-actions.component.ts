@@ -1,11 +1,11 @@
-import { DOCUMENT, NgForOf } from '@angular/common';
+import { DOCUMENT, NgForOf, NgOptimizedImage } from '@angular/common';
 import { Component, Inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-quick-actions',
   standalone: true,
-  imports: [RouterLink, NgForOf],
+  imports: [RouterLink, NgForOf, NgOptimizedImage],
   templateUrl: './quick-actions.component.html',
   styleUrl: './quick-actions.component.scss'
 })

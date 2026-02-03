@@ -30,67 +30,36 @@ export class ServiciosComponent {
       label: 'Electricidad',
       fragment: 'electricidad',
       left: 26,
-      link: '/service-details/electricidad'
+      link: '/service-details/electricidad',
+      icon: 'icons/electricidad.svg'
     },
     {
       label: 'Telefonía',
       fragment: 'telefonia',
       left: 42,
-      link: '/service-details/cable'
+      link: '/service-details/cable',
+      icon: 'icons/telefono.svg'
     },
     {
       label: 'Cable',
       fragment: 'cable',
       left: 58,
-      link: '/service-details/cable'
+      link: '/service-details/cable',
+      icon: 'icons/cable.svg'
     },
     {
       label: 'Internet',
       fragment: 'internet',
       left: 74,
-      link: '/service-details/cable'
+      link: '/service-details/cable',
+      icon: 'icons/internet.svg'
     },
     {
       label: 'Ambulancia</br> Sepelios',
       fragment: 'ambulancia',
       left: 92,
-      link: '/service-details/sepelios'
+      link: '/service-details/sepelios',
+      icon: 'icons/sepelio.svg'
     }
   ];
-
-
-  // services = [
-  //   {
-  //     id: 'agua',
-  //     title: 'Agua',
-  //     icon: '/icons/agua.svg',
-  //     image: '/images/servicio-agua.png',
-  //     description: [
-  //       'El agua potable es un recurso esencial para la vida.',
-  //       'COSPUD realiza la captación, tratamiento y distribución.'
-  //     ],
-  //     requirements: [
-  //       'Solicitud del propietario.',
-  //       'Permiso municipal.',
-  //       'Pago de costos.',
-  //       'Instalación de medidor.'
-  //     ],
-  //     download: 'assets/docs/requisitos-agua.pdf'
-  //   },
-  //   {
-  //     id: 'electricidad',
-  //     title: 'Electricidad',
-  //     icon: 'assets/svg/electricidad.svg',
-  //     image: 'assets/img/servicios/electricidad.jpg',
-  //     description: [
-  //       'Servicio de energía eléctrica domiciliaria.'
-  //     ],
-  //     requirements: [
-  //       'Documentación del inmueble.',
-  //       'Instalación aprobada.'
-  //     ],
-  //     download: 'assets/docs/requisitos-electricidad.pdf'
-  //   }
-  // ];
-
 }

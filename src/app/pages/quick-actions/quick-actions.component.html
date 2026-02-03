@@ -1,46 +1,43 @@
 <section class="quick-actions">
+
+  <!-- ===== Acciones rápidas ===== -->
   <div class="actions-container">
     <div class="actions-grid">
+
       <a class="action action-pay" routerLink="/pagar-factura">
-        <img src="icons/paga-factura.svg" alt="Pagar factura" />
+        <img ngSrc="icons/paga-factura.svg" width="48" height="48" alt="Pagar factura" loading="eager" decoding="async"
+          fetchpriority=high />
         <span>Pagá tu factura</span>
       </a>
-    
+
       <a class="action action-contract" routerLink="/servicios">
-        <img src="icons/contrata-servicio.svg" alt="Contratar servicio" />
+        <img ngSrc="icons/contrata-servicio.svg" width="48" height="48" alt="Contratar servicio" loading="eager"
+          decoding="async" fetchpriority=high />
         <span>Contratá un servicio</span>
       </a>
-    
+
       <a class="action action-support" routerLink="/consultas-reclamos">
-        <img src="icons/consultas-reclamos.svg" alt="Consultas y reclamos" />
+        <img ngSrc="icons/consultas-reclamos.svg" width="48" height="48" alt="Consultas y reclamos" loading="eager"
+          decoding="async" fetchpriority=high />
         <span>Consultas y reclamos</span>
       </a>
+
     </div>
   </div>
+
+  <!-- ===== Hero institucional ===== -->
   <section class="institutional-hero">
-    <picture>
-      <source
-        [srcset]="baseUrl + 'images/hero-background.webp'"
-        type="image/webp"
-      />
-      <source
-        [srcset]="baseUrl + 'images/hero-background.png'"
-        type="image/png"
-      />
-      <img
-        class="hero-bg"
-        [src]="baseUrl + 'images/hero-background.png'"
-        alt=""
-        aria-hidden="true"
-        fetchpriority="high"
-        decoding="async"
-      />
-    </picture>
+
+    <img ngSrc="images/hero-background.webp" width="1920" height="520" class="hero-bg" alt="" aria-hidden="true"
+      priority fetchpriority="high" />
+
     <div class="hero-content">
       <h2>
         Haciendo <span>crecer a nuestra<br />
-        comunidad</span> desde 1948
+          comunidad</span> desde 1948
       </h2>
     </div>
+
   </section>
+
 </section>

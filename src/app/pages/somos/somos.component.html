@@ -17,7 +17,7 @@
 
           <span class="tab-icon">
             <img [src]="activeIndex === i ? 'icons/menos.svg' : 'icons/mas.svg'" alt="" aria-hidden="true"
-              loading="lazy" />
+              loading="eager" decoding="async" fetchpriority=high />
           </span>
         </div>
       </button>
@@ -35,7 +35,7 @@
     <picture>
       <source [srcset]="baseUrl + 'images/somos-voz.webp'" type="image/webp" />
       <source [srcset]="baseUrl + 'images/somos-voz.avif'" type="image/avif" />
-      <img [src]="baseUrl + 'images/somos-voz.png'" alt="Somos COSPUD" loading="lazy" decoding="async" />
+      <img [src]="baseUrl + 'images/somos-voz.webp'" alt="Somos COSPUD" loading="eager" decoding="async" />
     </picture>
   </div>
 </section>

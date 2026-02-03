@@ -4,7 +4,8 @@
 
         <div class="service-header-overlay">
             <div class="service-icon">
-                <img [src]="service.icon" [alt]="service.title" loading="lazy" />
+                <img [src]="service.icon" [alt]="service.title" loading="eager"
+                decoding="async" fetchpriority=high />
             </div>
 
             <h2 class="service-title">{{ service.title }}</h2>
@@ -51,7 +52,8 @@
 
         </p>
         <a class="service-download" (click)="downloadFile(service.download)">
-            <img class="download-icon" [src]="service.downloadIcon" alt="" aria-hidden="true" />
+            <img class="download-icon" [src]="service.downloadIcon" alt="" aria-hidden="true" loading="eager"
+            decoding="async" fetchpriority=high />
             Descargá los requisitos
         </a>
     </section>

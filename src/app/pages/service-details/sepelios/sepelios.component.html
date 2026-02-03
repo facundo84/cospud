@@ -4,7 +4,8 @@
 
         <div class="service-header-overlay">
             <div class="service-icon">
-                <img [src]="service.icon" [alt]="service.title" loading="lazy" />
+                <img [src]="service.icon" [alt]="service.title" loading="eager"
+                decoding="async" fetchpriority=high />
             </div>
 
             <h2 class="service-title">{{ service.title }}</h2>
