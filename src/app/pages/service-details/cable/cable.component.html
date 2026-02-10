@@ -37,7 +37,7 @@
             Si es inquilino, debe abonar igual costo y presentar contrato de alquiler certificado por Escribano.
         </p>
 
-        <a class="service-download" (click)="downloadFile(service.download)">
+        <a class="service-download" [href]="service.download" target="_blank" rel="noopener">
             <img
               class="download-icon"
               [src]="service.downloadIcon"

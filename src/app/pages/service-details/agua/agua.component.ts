@@ -1,5 +1,5 @@
-import { NgForOf } from '@angular/common';
 import { Component } from '@angular/core';
+import { NgForOf, Location } from '@angular/common';
 
 @Component({
   selector: 'app-agua',
@@ -10,6 +10,8 @@ import { Component } from '@angular/core';
 })
 export class AguaComponent {
 
+  constructor(private location: Location) {}
+
   services = [
     {
       id: 'agua',
@@ -17,29 +19,15 @@ export class AguaComponent {
       icon: 'icons/agua.svg',
       downloadIcon: 'icons/requisitos.svg',
       image: 'images/servicio-agua.webp',
-      download: 'assets/docs/requisitos-servicios.pdf'
+      download: 'docs/requisitos-servicios.pdf'
     }
   ];
 
-  downloadFile(url: string) {
-    fetch(url)
-      .then(response => response.blob())
-      .then(blob => {
-        const blobUrl = window.URL.createObjectURL(blob);
+  downloadFile(relativeUrl: string) {
+    const baseHref = this.location.prepareExternalUrl('');
+    const url = `${baseHref}${relativeUrl}`;
 
-        const a = document.createElement('a');
-        a.href = blobUrl;
-        a.download = url.split('/').pop() || 'archivo.pdf';
-
-        document.body.appendChild(a);
-        a.click();
-
-        document.body.removeChild(a);
-        window.URL.revokeObjectURL(blobUrl);
-      })
-      .catch(err => {
-        console.error('Error al descargar el archivo', err);
-      });
+    window.open(url, '_blank');
   }
 
   ngAfterViewInit() {
@@ -64,5 +52,5 @@ export class AguaComponent {
 
     headers.forEach(el => observer.observe(el));
   }
-
 }
+

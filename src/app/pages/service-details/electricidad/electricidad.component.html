@@ -33,7 +33,7 @@
 
         </p>
 
-        <a class="service-download" (click)="downloadFile(service.download)">
+        <a class="service-download" [href]="service.download" target="_blank" rel="noopener">
             <img class="download-icon" [src]="service.downloadIcon" alt="" aria-hidden="true" />
             Descargá los requisitos
         </a>

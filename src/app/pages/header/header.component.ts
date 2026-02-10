@@ -16,7 +16,7 @@ export class HeaderComponent {
   mobileOpen = false;
   showTextLogo = false;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
 
   scrollToSection(sectionId: string, event: Event) {
     event.preventDefault();
@@ -37,8 +37,23 @@ export class HeaderComponent {
     }
   }
 
+  goToNovedades() {
+    if (this.router.url === '/' || this.router.url.startsWith('/#')) {
+      this.scrollToNovedades();
+    } else {
+      this.router.navigate(['/']).then(() => {
+        setTimeout(() => this.scrollToNovedades(), 0);
+      });
+    }
+  }
+
   scrollToServicios() {
     const section = document.getElementById('servicios');
+    section?.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  scrollToNovedades() {
+    const section = document.getElementById('novedades');
     section?.scrollIntoView({ behavior: 'smooth' });
   }
 

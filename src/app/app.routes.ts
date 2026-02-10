@@ -5,6 +5,7 @@ import { ElectricidadComponent } from './pages/service-details/electricidad/elec
 import { CableComponent } from './pages/service-details/cable/cable.component';
 import { SepeliosComponent } from './pages/service-details/sepelios/sepelios.component';
 import { ConsultasReclamosComponent } from './pages/consultas-reclamos/consultas-reclamos.component';
+import { SocialWidgetComponent } from './pages/social-widget/social-widget.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -12,6 +13,10 @@ export const routes: Routes = [
     path: 'somos',
     loadChildren: () =>
       import('./pages/somos/somos.routes').then(m => m.SOMOS_ROUTES)
+  },
+  {
+    path: 'novedades',
+    component: SocialWidgetComponent
   },
   {
     path: 'trabaja-con-nosotros',

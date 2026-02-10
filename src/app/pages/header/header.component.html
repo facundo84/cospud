@@ -15,10 +15,13 @@
   </div>
 
   <nav class="nav" id="main-navigation">
-    <a routerLink="/somos" routerLinkActive="active" (click)="menuToggle.checked = false">Somos Voz</a>
+    <a routerLink="/somos" routerLinkActive="active" (click)="menuToggle.checked = false">Somos Voz</a> 
+    <a routerLinkActive="active" (click)="goToNovedades(); menuToggle.checked = false">
+      Novedades
+    </a>
     <a routerLink="/trabaja-con-nosotros" routerLinkActive="active" (click)="menuToggle.checked = false">Trabajá con
       nosotros</a>
-    <a (click)="goToServicios(); menuToggle.checked = false">
+    <a routerLinkActive="active" (click)="goToServicios(); menuToggle.checked = false">
       Servicios
     </a>
     <a href="#" class="autogestion" (click)="scrollToSection('autogestion', $event); menuToggle.checked = false">

@@ -1,29 +1,107 @@
+// @use '../../../../styles/variables' as *;
+
+// .service-card {
+//   min-height: 96px;
+//   margin: 0;
+//   padding: 0;
+
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   color: #ffffff;
+//   font-weight: 600;
+//   font-size: 0.95rem;
+//   cursor: pointer;
+// }
+
+// /* Link ocupa toda la card */
+// .service-link {
+//   width: 100%;
+//   height: 100%;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   gap: 12px;
+//   text-decoration: none;
+//   color: inherit;
+// }
+
+
+// /* Icon */
+// .icon {
+//   width: 32px;
+//   height: 32px;
+//   flex-shrink: 0;
+// }
+
+// /* Texto */
+// .title {
+//   font-weight: 600;
+//   font-size: 0.95rem;
+//   white-space: nowrap;
+// }
+
+// /* Hover desktop */
+// @media (hover: hover) {
+//   .service-card:hover {
+//     filter: brightness(1.05);
+//   }
+// }
+
+// /* ===== Mobile ===== */
+// @media (max-width: 768px) {
+//   .service-card {
+//     min-height: 88px;
+//   }
+
+//   .service-link {
+//     flex-direction: column;
+//     gap: 6px;
+//     text-align: center;
+//   }
+
+//   .icon {
+//     width: 28px;
+//     height: 28px;
+//   }
+
+//   .title {
+//     display: none;
+//   }
+// }
 @use '../../../../styles/variables' as *;
 
 .service-card {
   min-height: 96px;
   margin: 0;
   padding: 0;
-
+  position: relative; /* CRUCIAL: Contenedor de referencia */
+  
   display: flex;
   align-items: center;
   justify-content: center;
   color: #ffffff;
   font-weight: 600;
   font-size: 0.95rem;
-  cursor: pointer;
+  // Ya no necesitas cursor: pointer aquí, el link lo hará.
 }
 
-/* Link ocupa toda la card */
+/* Link ocupa TODA la card */
 .service-link {
+  position: absolute; /* Se estira sobre el div */
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
+  align-items: center;    /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  gap: 16px;              /* Espacio aumentado entre img y texto */
+  
   text-decoration: none;
   color: inherit;
+  z-index: 1;             /* Asegura que esté por encima de todo */
 }
 
 /* Icon */
@@ -31,6 +109,7 @@
   width: 32px;
   height: 32px;
   flex-shrink: 0;
+  display: block; /* Evita espacios extra debajo de la imagen */
 }
 
 /* Texto */
@@ -38,12 +117,13 @@
   font-weight: 600;
   font-size: 0.95rem;
   white-space: nowrap;
+  line-height: 1; /* Centrado óptico: evita que el texto empuje hacia abajo */
 }
 
 /* Hover desktop */
 @media (hover: hover) {
   .service-card:hover {
-    filter: brightness(1.05);
+    filter: brightness(1.1); /* Un poco más notable que 1.05 */
   }
 }
 
@@ -55,8 +135,8 @@
 
   .service-link {
     flex-direction: column;
-    gap: 6px;
-    text-align: center;
+    justify-content: center; /* Centrado vertical en modo columna */
+    gap: 8px;
   }
 
   .icon {
@@ -65,6 +145,6 @@
   }
 
   .title {
-    display: none;
+    display: none; /* Como lo tenías */
   }
 }

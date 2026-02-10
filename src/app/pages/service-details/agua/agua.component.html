@@ -4,8 +4,7 @@
 
         <div class="service-header-overlay">
             <div class="service-icon">
-                <img [src]="service.icon" [alt]="service.title" loading="eager"
-                decoding="async" fetchpriority=high />
+                <img [src]="service.icon" [alt]="service.title" loading="eager" decoding="async" fetchpriority=high />
             </div>
 
             <h2 class="service-title">{{ service.title }}</h2>
@@ -51,9 +50,9 @@
             lectura, mientras que <span>la limpieza de la caja es responsabilidad exclusiva del usuario</span>.
 
         </p>
-        <a class="service-download" (click)="downloadFile(service.download)">
+        <a class="service-download" [href]="service.download" target="_blank" rel="noopener">
             <img class="download-icon" [src]="service.downloadIcon" alt="" aria-hidden="true" loading="eager"
-            decoding="async" fetchpriority=high />
+                decoding="async" fetchpriority=high />
             Descargá los requisitos
         </a>
     </section>

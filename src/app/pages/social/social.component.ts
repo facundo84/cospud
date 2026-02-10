@@ -36,4 +36,11 @@ export class SocialComponent {
     observer.observe(section);
   }
 
+  openWhatsapp() {
+    window.open(
+      'https://wa.me/5493547612027',
+      '_blank'
+    );
+  }
+
 }

@@ -5,13 +5,11 @@
 <app-quick-actions></app-quick-actions>
 <section class="services-cta" id="servicios" data-bg="images/services-cta.webp">
   <div class="cta-bg"></div>
-
   <div class="cta-title">
     <h3>
       Conocé nuestros <strong>Servicios</strong>
     </h3>
   </div>
-
   <div class="cta-footer">
     <a *ngFor="let service of services" class="cta-item" [style.left.%]="service.left" [innerHTML]="service.label"
       [routerLink]="service.link"></a>
@@ -19,5 +17,28 @@
 </section>
 
 <app-social></app-social>
+<app-social-widget id="novedades"></app-social-widget>
 
 <app-payment-methods></app-payment-methods>
+
+<div class="modal-overlay" *ngIf="showModal">
+  <div class="modal">
+    <button class="close-btn" (click)="closeModal()">Cerrar</button>
+    <section class="social-widget">
+      <div class="social-widget__header">
+        <p>
+          Sumate a <span>nuestra comunidad en redes</span> para<br />
+          enterarte todas las <span>novedades</span>.
+        </p>
+      </div>
+
+      <div class="social-widget__frame">
+        <!-- LightWidget WIDGET -->
+        <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+        <iframe src="https://cdn.lightwidget.com/widgets/39664e3c25f35bb6a8318367414f4515.html" scrolling="no"
+          allowtransparency="true" class="instagram-iframe" title="Instagram COSPUD"
+          style="width:100%;border:0;overflow:hidden;"></iframe>
+      </div>
+    </section>
+  </div>
+</div>
