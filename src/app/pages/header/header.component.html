@@ -1,30 +1,75 @@
 <header class="header">
   <input type="checkbox" id="menu-toggle" class="menu-toggle" #menuToggle />
-  <label for="menu-toggle" class="menu-btn" role="button" aria-label="Abrir menú">
+  <label
+    for="menu-toggle"
+    class="menu-btn"
+    role="button"
+    aria-label="Abrir menú"
+  >
     <img src="icons/menu.svg" alt="Menu" class="menu-icon" />
   </label>
 
   <div class="logo">
-    <a routerLink="/" aria-label="Ir al inicio" (click)="menuToggle.checked = false">
+    <a
+      routerLink="/"
+      aria-label="Ir al inicio"
+      (click)="menuToggle.checked = false"
+    >
       <img src="icons/cospud-logo.svg" alt="COSPUD" />
     </a>
   </div>
 
   <div class="user-icon-mobile">
-    <img src="icons/autogestion.svg" alt="Autogestión" />
+    <a
+      href="https://cospud.coopinfo.com.ar"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img src="icons/autogestion.svg" alt="Autogestión" />
+    </a>
   </div>
 
   <nav class="nav" id="main-navigation">
-    <a routerLink="/somos" routerLinkActive="active" (click)="menuToggle.checked = false">Somos Voz</a> 
-    <a routerLinkActive="active" (click)="goToNovedades(); menuToggle.checked = false">
+    <a
+      routerLink="/somos"
+      routerLinkActive="active"
+      (click)="menuToggle.checked = false"
+      >Somos Voz</a
+    >
+    <a
+      routerLinkActive="active"
+      (click)="goToNovedades(); menuToggle.checked = false"
+    >
       Novedades
     </a>
-    <a routerLink="/trabaja-con-nosotros" routerLinkActive="active" (click)="menuToggle.checked = false">Trabajá con
-      nosotros</a>
-    <a routerLinkActive="active" (click)="goToServicios(); menuToggle.checked = false">
+    <a
+      routerLink="/trabaja-con-nosotros"
+      routerLinkActive="active"
+      (click)="menuToggle.checked = false"
+      >Trabajá con nosotros</a
+    >
+    <a
+      routerLinkActive="active"
+      (click)="goToServicios(); menuToggle.checked = false"
+    >
       Servicios
     </a>
-    <a href="#" class="autogestion" (click)="scrollToSection('autogestion', $event); menuToggle.checked = false">
+    <!-- <a
+      href="#"
+      class="autogestion"
+      (click)="
+        scrollToSection('autogestion', $event); menuToggle.checked = false
+      "
+    >
+      <img src="icons/autogestion.svg" alt="Autogestion" />
+      <span>Autogestión</span>
+    </a> -->
+    <a
+      href="https://cospud.coopinfo.com.ar"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="autogestion"
+    >
       <img src="icons/autogestion.svg" alt="Autogestion" />
       <span>Autogestión</span>
     </a>
